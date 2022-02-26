@@ -15,7 +15,6 @@ public class CerrarSesionAdministrador extends javax.swing.JInternalFrame {
      */
     public CerrarSesionAdministrador() {
         initComponents();
-        System.out.print("Hola, este es un cambio.");
     }
 
     /**
