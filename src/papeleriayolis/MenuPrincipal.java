@@ -29,11 +29,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel5 = new javax.swing.JPanel();
         jpMenu = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jbMenuUsuarios = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
+        jbMenuPuntoCobro = new javax.swing.JButton();
         jbMenuInventario = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jbMenuServicios = new javax.swing.JButton();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
 
@@ -46,23 +46,38 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jpMenu.setBackground(new java.awt.Color(252, 195, 20));
 
-        jButton2.setBackground(new java.awt.Color(252, 195, 20));
-        jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton2.setText("Usuarios");
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
+        jbMenuUsuarios.setBackground(new java.awt.Color(252, 195, 20));
+        jbMenuUsuarios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuUsuarios.setText("Usuarios");
+        jbMenuUsuarios.setBorder(null);
+        jbMenuUsuarios.setContentAreaFilled(false);
+        jbMenuUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbMenuUsuariosMouseClicked(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(252, 195, 20));
-        jButton3.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton3.setText("Salir");
-        jButton3.setBorder(null);
-        jButton3.setContentAreaFilled(false);
+        jbSalir.setBackground(new java.awt.Color(252, 195, 20));
+        jbSalir.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbSalir.setText("Salir");
+        jbSalir.setBorder(null);
+        jbSalir.setContentAreaFilled(false);
 
-        jButton4.setBackground(new java.awt.Color(252, 195, 20));
-        jButton4.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton4.setText("Punto de Cobro");
-        jButton4.setBorder(null);
-        jButton4.setContentAreaFilled(false);
+        jbMenuPuntoCobro.setBackground(new java.awt.Color(252, 195, 20));
+        jbMenuPuntoCobro.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuPuntoCobro.setText("Punto de Cobro");
+        jbMenuPuntoCobro.setBorder(null);
+        jbMenuPuntoCobro.setContentAreaFilled(false);
+        jbMenuPuntoCobro.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbMenuPuntoCobroMouseClicked(evt);
+            }
+        });
+        jbMenuPuntoCobro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMenuPuntoCobroActionPerformed(evt);
+            }
+        });
 
         jbMenuInventario.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuInventario.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -75,20 +90,25 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(252, 195, 20));
-        jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton6.setText("Servicios");
-        jButton6.setBorder(null);
-        jButton6.setContentAreaFilled(false);
+        jbMenuServicios.setBackground(new java.awt.Color(252, 195, 20));
+        jbMenuServicios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuServicios.setText("Servicios");
+        jbMenuServicios.setBorder(null);
+        jbMenuServicios.setContentAreaFilled(false);
+        jbMenuServicios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbMenuServiciosMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
         jpMenu.setLayout(jpMenuLayout);
         jpMenuLayout.setHorizontalGroup(
             jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbMenuUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbSalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbMenuPuntoCobro, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
+            .addComponent(jbMenuServicios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jbMenuInventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jpMenuLayout.setVerticalGroup(
@@ -97,13 +117,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap(213, Short.MAX_VALUE)
                 .addComponent(jbMenuInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbMenuPuntoCobro, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbMenuServicios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbMenuUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35))
         );
 
@@ -131,13 +151,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jbCerrrarActionPerformed(evt);
             }
         });
-        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 0, 50, 50));
+        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 50, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 940, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,6 +190,28 @@ public class MenuPrincipal extends javax.swing.JFrame {
         MenuInventario obmi = new MenuInventario();
         obmi.setVisible(true);
     }//GEN-LAST:event_jbMenuInventarioMouseClicked
+
+    private void jbMenuPuntoCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuPuntoCobroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbMenuPuntoCobroActionPerformed
+
+    private void jbMenuPuntoCobroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuPuntoCobroMouseClicked
+        dispose();
+        MenuPuntoCobro obmpc = new MenuPuntoCobro();
+        obmpc.setVisible(true);
+    }//GEN-LAST:event_jbMenuPuntoCobroMouseClicked
+
+    private void jbMenuServiciosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuServiciosMouseClicked
+        dispose();
+        MenuServicios obms = new MenuServicios();
+        obms.setVisible(true);
+    }//GEN-LAST:event_jbMenuServiciosMouseClicked
+
+    private void jbMenuUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuUsuariosMouseClicked
+        dispose();
+        MenuUsuarios obmu = new MenuUsuarios();
+        obmu.setVisible(true);
+    }//GEN-LAST:event_jbMenuUsuariosMouseClicked
 
     /**
      * @param args the command line arguments
@@ -210,14 +252,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
     private javax.swing.JButton jbMenuInventario;
+    private javax.swing.JButton jbMenuPuntoCobro;
+    private javax.swing.JButton jbMenuServicios;
+    private javax.swing.JButton jbMenuUsuarios;
+    private javax.swing.JButton jbSalir;
     private javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables
 

@@ -57,6 +57,11 @@ public class MenuInventario extends javax.swing.JFrame {
         jButton3.setText("Regresar al menu principal");
         jButton3.setBorder(null);
         jButton3.setContentAreaFilled(false);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(252, 195, 20));
         jButton4.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -126,7 +131,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbCerrrarActionPerformed(evt);
             }
         });
-        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 0, 50, 50));
+        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 50, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +164,12 @@ public class MenuInventario extends javax.swing.JFrame {
     private void jbCerrrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCerrrarActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jbCerrrarActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        dispose();
+        MenuPrincipal obmp = new MenuPrincipal();
+        obmp.setVisible(true);
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments
