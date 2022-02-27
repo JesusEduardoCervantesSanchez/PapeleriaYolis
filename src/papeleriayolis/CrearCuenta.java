@@ -115,7 +115,7 @@ public class CrearCuenta extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(255, 153, 0));
         jButton1.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(null);
         jButton1.setLabel("Confirmar");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 80, 30));
 
