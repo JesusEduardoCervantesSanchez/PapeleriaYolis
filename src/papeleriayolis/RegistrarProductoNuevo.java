@@ -22,7 +22,6 @@ public class RegistrarProductoNuevo extends javax.swing.JFrame {
         Fondo = new javax.swing.JPanel();
         Barra = new javax.swing.JPanel();
         BtnSalir = new javax.swing.JPanel();
-        txtSalir = new javax.swing.JLabel();
         BtnRegistrar = new javax.swing.JPanel();
         txtRegistrar = new javax.swing.JLabel();
         Titulo = new javax.swing.JLabel();
@@ -40,11 +39,11 @@ public class RegistrarProductoNuevo extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         CargarImagen = new javax.swing.JLabel();
         FondoColor = new javax.swing.JLabel();
+        txtSalir = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(600, 500));
 
         Fondo.setBackground(new java.awt.Color(255, 255, 255));
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,30 +62,15 @@ public class RegistrarProductoNuevo extends javax.swing.JFrame {
 
         BtnSalir.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtSalir.setText("X");
-        txtSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtSalir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtSalirMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                txtSalirMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                txtSalirMouseExited(evt);
-            }
-        });
-
         javax.swing.GroupLayout BtnSalirLayout = new javax.swing.GroupLayout(BtnSalir);
         BtnSalir.setLayout(BtnSalirLayout);
         BtnSalirLayout.setHorizontalGroup(
             BtnSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSalir, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+            .addGap(0, 49, Short.MAX_VALUE)
         );
         BtnSalirLayout.setVerticalGroup(
             BtnSalirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtSalir, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+            .addGap(0, 39, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout BarraLayout = new javax.swing.GroupLayout(Barra);
@@ -232,15 +216,35 @@ public class RegistrarProductoNuevo extends javax.swing.JFrame {
         FondoColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondos.png"))); // NOI18N
         Fondo.add(FondoColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 600, 460));
 
+        txtSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtSalir.setText("X");
+        txtSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtSalir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtSalirMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                txtSalirMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                txtSalirMouseExited(evt);
+            }
+        });
+        Fondo.add(txtSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 49, 39));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 920, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
