@@ -191,7 +191,7 @@ public class MenuInventario extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jbRegistrarNuevoPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarNuevoPActionPerformed
-
+        new CambiaPanel(jpPrincipal, new RegistrarProductoN());
     }//GEN-LAST:event_jbRegistrarNuevoPActionPerformed
 
     /**

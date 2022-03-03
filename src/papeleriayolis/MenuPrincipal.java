@@ -186,7 +186,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCerrrarActionPerformed
 
     private void jbMenuInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuInventarioMouseClicked
-        dispose();
+        hide();
         MenuInventario obmi = new MenuInventario();
         obmi.setVisible(true);
     }//GEN-LAST:event_jbMenuInventarioMouseClicked
