@@ -34,6 +34,8 @@ public class MenuInventario extends javax.swing.JFrame {
         jbRegistrarNuevoP = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
         jpPrincipal = new javax.swing.JPanel();
@@ -46,12 +48,14 @@ public class MenuInventario extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setBackground(new java.awt.Color(252, 195, 20));
         jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jButton2.setText("Modificar datos");
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
+        jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 394, 260, 40));
 
         jButton3.setBackground(new java.awt.Color(252, 195, 20));
         jButton3.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -63,6 +67,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jButton3MouseClicked(evt);
             }
         });
+        jpMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 452, 260, 40));
 
         jbRegistrarNuevoP.setBackground(new java.awt.Color(252, 195, 20));
         jbRegistrarNuevoP.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -74,12 +79,14 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbRegistrarNuevoPActionPerformed(evt);
             }
         });
+        jpMenu.add(jbRegistrarNuevoP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 278, 260, 40));
 
         jButton5.setBackground(new java.awt.Color(252, 195, 20));
         jButton5.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jButton5.setText("Visualizar");
         jButton5.setBorder(null);
         jButton5.setContentAreaFilled(false);
+        jpMenu.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 260, 40));
 
         jButton6.setBackground(new java.awt.Color(252, 195, 20));
         jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -91,37 +98,20 @@ public class MenuInventario extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
+        jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 336, 260, 40));
 
-        javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
-        jpMenu.setLayout(jpMenuLayout);
-        jpMenuLayout.setHorizontalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-            .addComponent(jbRegistrarNuevoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jpMenuLayout.setVerticalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpMenuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jbRegistrarNuevoP, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
+        jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
+        jLabel1.setText("Papeleria");
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
+        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
+        jLabel2.setText("Yolis");
+        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
+
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 530));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
-        jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menubuttonofthreelinesoutline_112563.png"))); // NOI18N
+        jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
         jbDesplegarMenu.setBorder(null);
         jbDesplegarMenu.setContentAreaFilled(false);
         jbDesplegarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -129,7 +119,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 60));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
@@ -142,7 +132,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbCerrrarActionPerformed(evt);
             }
         });
-        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 50, 50));
+        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
         jpPrincipal.setBackground(new java.awt.Color(2, 159, 220));
         jpPrincipal.setLayout(new javax.swing.BoxLayout(jpPrincipal, javax.swing.BoxLayout.LINE_AXIS));
@@ -167,12 +157,12 @@ public class MenuInventario extends javax.swing.JFrame {
         if(posicion>5)
         {
             Animacion.Animacion.mover_izquierda(261, 5, 2, 2, jbDesplegarMenu);
-            Animacion.Animacion.mover_izquierda(5, -260, 2, 2, jpMenu);
+            Animacion.Animacion.mover_izquierda(5, -261, 2, 2, jpMenu);
         }
         else
         {
             Animacion.Animacion.mover_derecha(5, 260, 2, 2, jbDesplegarMenu);
-            Animacion.Animacion.mover_derecha(-260, 5, 2, 2, jpMenu);
+            Animacion.Animacion.mover_derecha(-260, 0, 2, 2, jpMenu);
         }
     }//GEN-LAST:event_jbDesplegarMenuActionPerformed
 
@@ -241,6 +231,8 @@ public class MenuInventario extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;

@@ -105,7 +105,7 @@ public class MenuUsuarios extends javax.swing.JFrame {
         jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
-        jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/menubuttonofthreelinesoutline_112563.png"))); // NOI18N
+        jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
         jbDesplegarMenu.setBorder(null);
         jbDesplegarMenu.setContentAreaFilled(false);
         jbDesplegarMenu.addActionListener(new java.awt.event.ActionListener() {
@@ -113,7 +113,7 @@ public class MenuUsuarios extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 60, 60));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
@@ -126,7 +126,7 @@ public class MenuUsuarios extends javax.swing.JFrame {
                 jbCerrrarActionPerformed(evt);
             }
         });
-        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 50, 50));
+        jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
