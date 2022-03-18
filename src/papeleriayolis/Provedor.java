@@ -52,61 +52,79 @@ public class Provedor extends javax.swing.JPanel {
         Backgroun = new javax.swing.JLabel();
         txtCantidad = new javax.swing.JTextField();
         lblCantidad = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblNombreVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblNombreVendedor.setText("Nombre :");
-        jPanel1.add(lblNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 50, -1));
+        jPanel1.add(lblNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
 
         txtNombre.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 140, -1));
+        txtNombre.setBorder(null);
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 140, -1));
 
         lblcodigo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblcodigo.setText("Codigo :");
-        jPanel1.add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 50, -1));
+        jPanel1.add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 50, -1));
 
         txtCodigo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtCodigo.setBorder(null);
         txtCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtCodigoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 140, -1));
+        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 140, -1));
 
         lbltelefono.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lbltelefono.setText("Telefono :");
-        jPanel1.add(lbltelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
+        jPanel1.add(lbltelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 50, -1));
 
         txtTelefono.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 140, -1));
+        txtTelefono.setBorder(null);
+        jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, -1));
 
         lblCorreoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblCorreoVendedor.setText("Correo :");
-        jPanel1.add(lblCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 50, -1));
+        jPanel1.add(lblCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 50, -1));
 
         txtCorreo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 140, -1));
+        txtCorreo.setBorder(null);
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 140, -1));
 
         lblContraseñaVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblContraseñaVendedor.setText("Producto :");
-        jPanel1.add(lblContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 70, -1));
+        jPanel1.add(lblContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 70, -1));
 
         txtProducto.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, -1));
+        txtProducto.setBorder(null);
+        jPanel1.add(txtProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 140, -1));
 
         lblID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblID.setText("ID :");
-        jPanel1.add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 270, 20, -1));
+        jPanel1.add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 20, -1));
 
         txtID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 70, -1));
+        txtID.setBorder(null);
+        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 70, -1));
 
         imgVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/perfil (1).png"))); // NOI18N
         jPanel1.add(imgVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 130, 130));
 
         btnBuscar.setBackground(new java.awt.Color(254, 192, 15));
         btnBuscar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.setBorder(null);
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -118,6 +136,7 @@ public class Provedor extends javax.swing.JPanel {
 
         btnAgregar.setBackground(new java.awt.Color(254, 192, 15));
         btnAgregar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
         btnAgregar.setText("Agregar");
         btnAgregar.setBorder(null);
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +148,7 @@ public class Provedor extends javax.swing.JPanel {
 
         btnEliminar.setBackground(new java.awt.Color(254, 192, 15));
         btnEliminar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorder(null);
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
@@ -140,6 +160,7 @@ public class Provedor extends javax.swing.JPanel {
 
         btnActualizar.setBackground(new java.awt.Color(254, 192, 15));
         btnActualizar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/actualizar.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
         btnActualizar.setBorder(null);
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -150,30 +171,46 @@ public class Provedor extends javax.swing.JPanel {
         jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 70, 20));
 
         Backgroun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoVendedores.png"))); // NOI18N
-        jPanel1.add(Backgroun, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 200, 460));
+        jPanel1.add(Backgroun, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 0, 230, 460));
 
         txtCantidad.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 140, -1));
+        txtCantidad.setBorder(null);
+        txtCantidad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCantidadActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 140, -1));
 
         lblCantidad.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblCantidad.setText("Cantidad :");
-        jPanel1.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 70, -1));
+        jPanel1.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 70, -1));
+
+        jLabel1.setFont(new java.awt.Font("Agency FB", 0, 48)); // NOI18N
+        jLabel1.setText("Proveedor");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 70, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 140, 10));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 140, 10));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 140, 10));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 140, 10));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 140, 10));
+        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 140, 10));
+        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 140, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtCodigoActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         Conexion conn = Conexion.getInstancia();
@@ -209,6 +246,7 @@ public class Provedor extends javax.swing.JPanel {
             conn = null;
             rs = null;
         }
+        
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
@@ -237,6 +275,7 @@ public class Provedor extends javax.swing.JPanel {
             ps = null;
             conn = null;
         }
+        this.Limpiar();
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
@@ -267,6 +306,7 @@ public class Provedor extends javax.swing.JPanel {
             ps = null;
             conn = null;
         }
+        this.Limpiar();
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
@@ -303,7 +343,16 @@ public class Provedor extends javax.swing.JPanel {
             ps = null;
             conn = null;
         }
+        this.Limpiar();
     }//GEN-LAST:event_btnActualizarActionPerformed
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
+
+    private void txtCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCantidadActionPerformed
 
     public void Limpiar() {
         txtNombre.setText("");
@@ -322,7 +371,16 @@ public class Provedor extends javax.swing.JPanel {
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JLabel imgVendedor;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
     private javax.swing.JLabel lblCantidad;
     private javax.swing.JLabel lblContraseñaVendedor;
     private javax.swing.JLabel lblCorreoVendedor;
