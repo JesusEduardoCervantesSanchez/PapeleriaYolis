@@ -4,6 +4,8 @@
  */
 package papeleriayolis;
 
+import paneles.CambiaPanel;
+
 /**
  *
  * @author CSjes
@@ -31,11 +33,12 @@ public class MenuInventario extends javax.swing.JFrame {
         jpMenu = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jbRegistrarNuevoP = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
+        jpPrincipal = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 159, 220));
@@ -63,11 +66,16 @@ public class MenuInventario extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(252, 195, 20));
-        jButton4.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton4.setText("Registrar");
-        jButton4.setBorder(null);
-        jButton4.setContentAreaFilled(false);
+        jbRegistrarNuevoP.setBackground(new java.awt.Color(252, 195, 20));
+        jbRegistrarNuevoP.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbRegistrarNuevoP.setText("Registrar");
+        jbRegistrarNuevoP.setBorder(null);
+        jbRegistrarNuevoP.setContentAreaFilled(false);
+        jbRegistrarNuevoP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrarNuevoPActionPerformed(evt);
+            }
+        });
 
         jButton5.setBackground(new java.awt.Color(252, 195, 20));
         jButton5.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -80,6 +88,11 @@ public class MenuInventario extends javax.swing.JFrame {
         jButton6.setText("Dar de baja");
         jButton6.setBorder(null);
         jButton6.setContentAreaFilled(false);
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
         jpMenu.setLayout(jpMenuLayout);
@@ -87,7 +100,7 @@ public class MenuInventario extends javax.swing.JFrame {
             jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbRegistrarNuevoP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -97,7 +110,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 .addContainerGap(213, Short.MAX_VALUE)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbRegistrarNuevoP, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -118,7 +131,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 60, 60));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 60, 60));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
@@ -133,6 +146,10 @@ public class MenuInventario extends javax.swing.JFrame {
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 0, 50, 50));
 
+        jpPrincipal.setBackground(new java.awt.Color(2, 159, 220));
+        jpPrincipal.setLayout(new javax.swing.BoxLayout(jpPrincipal, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel5.add(jpPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(267, 67, 670, 460));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -141,7 +158,7 @@ public class MenuInventario extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
         );
 
         pack();
@@ -170,6 +187,14 @@ public class MenuInventario extends javax.swing.JFrame {
         MenuPrincipal obmp = new MenuPrincipal();
         obmp.setVisible(true);
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+       
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jbRegistrarNuevoPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarNuevoPActionPerformed
+
+    }//GEN-LAST:event_jbRegistrarNuevoPActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,13 +241,14 @@ public class MenuInventario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
+    private javax.swing.JButton jbRegistrarNuevoP;
     private javax.swing.JPanel jpMenu;
+    private javax.swing.JPanel jpPrincipal;
     // End of variables declaration//GEN-END:variables
 
 }
