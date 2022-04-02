@@ -2,8 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
+<<<<<<< HEAD
 package papeleriayolis;
 import database.Conexion;
+=======
+package database;
+>>>>>>> 48f5ecd575414ab7cb39b2b92941d0ee06cd2638
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -196,7 +200,11 @@ public class Productos extends javax.swing.JPanel {
     }//GEN-LAST:event_txtExistenciaActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+<<<<<<< HEAD
         Conexion conn = Conexion.getInstance();
+=======
+        Conexion conn = Conexion.getInstancia();
+>>>>>>> 48f5ecd575414ab7cb39b2b92941d0ee06cd2638
         encontrado = false;
         PreparedStatement ps;
         ResultSet rs;
@@ -232,7 +240,11 @@ public class Productos extends javax.swing.JPanel {
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+<<<<<<< HEAD
         Conexion conn = Conexion.getInstance();
+=======
+        Conexion conn = Conexion.getInstancia();
+>>>>>>> 48f5ecd575414ab7cb39b2b92941d0ee06cd2638
         PreparedStatement ps;
         String consultaSQL = "insert into Productos(nombreProducto, Existencias, PrecioCompra, PrecioVenta,Categoria  )\n"
         + "values(?,?,?,?,?) ;";
@@ -259,7 +271,11 @@ public class Productos extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+<<<<<<< HEAD
         Conexion conn = Conexion.getInstance();
+=======
+        Conexion conn = Conexion.getInstancia();
+>>>>>>> 48f5ecd575414ab7cb39b2b92941d0ee06cd2638
         PreparedStatement ps;
         if (txtID.getText().equals("") || encontrado == false) {
             JOptionPane.showMessageDialog(null, "Debes seleccionar un producto");
@@ -290,7 +306,11 @@ public class Productos extends javax.swing.JPanel {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
+<<<<<<< HEAD
         Conexion conn = Conexion.getInstance();
+=======
+        Conexion conn = Conexion.getInstancia();
+>>>>>>> 48f5ecd575414ab7cb39b2b92941d0ee06cd2638
         PreparedStatement ps;
         if (txtID.getText().isBlank()) {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una categoria");
