@@ -32,6 +32,8 @@ public class MenuServicios extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jbRegresarMP = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
 
@@ -43,23 +45,27 @@ public class MenuServicios extends javax.swing.JFrame {
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton2.setBackground(new java.awt.Color(252, 195, 20));
         jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jButton2.setText("Local");
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
 
         jbRegresarMP.setBackground(new java.awt.Color(252, 195, 20));
         jbRegresarMP.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jbRegresarMP.setText("Regresar al menu principal");
         jbRegresarMP.setBorder(null);
         jbRegresarMP.setContentAreaFilled(false);
+        jbRegresarMP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jbRegresarMP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jbRegresarMPMouseClicked(evt);
@@ -70,32 +76,23 @@ public class MenuServicios extends javax.swing.JFrame {
                 jbRegresarMPActionPerformed(evt);
             }
         });
+        jpMenu.add(jbRegresarMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 445, 260, 40));
 
         jButton6.setBackground(new java.awt.Color(252, 195, 20));
         jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jButton6.setText("En linea");
         jButton6.setBorder(null);
         jButton6.setContentAreaFilled(false);
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 260, 40));
 
-        javax.swing.GroupLayout jpMenuLayout = new javax.swing.GroupLayout(jpMenu);
-        jpMenu.setLayout(jpMenuLayout);
-        jpMenuLayout.setHorizontalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jbRegresarMP, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jpMenuLayout.setVerticalGroup(
-            jpMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpMenuLayout.createSequentialGroup()
-                .addContainerGap(329, Short.MAX_VALUE)
-                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jbRegresarMP, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35))
-        );
+        jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
+        jLabel1.setText("Papeleria");
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
+        jLabel2.setText("Yolis");
+        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
 
         jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
 
@@ -214,6 +211,8 @@ public class MenuServicios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton6;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;

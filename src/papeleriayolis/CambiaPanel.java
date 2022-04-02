@@ -17,5 +17,4 @@ public class CambiaPanel {
         this.container.revalidate();
         this.container.repaint();
     }
-
 }

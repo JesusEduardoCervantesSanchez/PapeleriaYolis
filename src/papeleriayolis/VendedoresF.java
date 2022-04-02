@@ -1,22 +1,25 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package papeleria;
-import java.sql.PreparedStatement;
+package papeleriayolis;
+
 import java.sql.ResultSet;
-import java.sql.SQLException;
+import database.Conexion;
 import javax.swing.JOptionPane;
+import java.sql.SQLException;
+import java.sql.PreparedStatement;
+
 /**
  *
- * @author Cristianss
+ * @author CSjes
  */
-public class Vendedores extends javax.swing.JInternalFrame {
+public class VendedoresF extends javax.swing.JPanel {
 
     /**
-     * Creates new form Vendedores
+     * Creates new form VendedoresF
      */
-    public Vendedores() {
+    public VendedoresF() {
         initComponents();
     }
 
@@ -38,7 +41,6 @@ public class Vendedores extends javax.swing.JInternalFrame {
         lblCorreoVendedor = new javax.swing.JLabel();
         txtCorreoVendedor = new javax.swing.JTextField();
         lblContraseñaVendedor = new javax.swing.JLabel();
-        txtContraseñaVendedor = new javax.swing.JTextField();
         lblID = new javax.swing.JLabel();
         txtID = new javax.swing.JTextField();
         imgVendedor = new javax.swing.JLabel();
@@ -47,125 +49,157 @@ public class Vendedores extends javax.swing.JInternalFrame {
         btnEliminar = new javax.swing.JButton();
         Backgroun = new javax.swing.JLabel();
         btnActualizar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        txtContrasenaVendedor = new javax.swing.JPasswordField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(670, 460));
+        setPreferredSize(new java.awt.Dimension(670, 460));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lblNombreVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblNombreVendedor.setText("Nombre :");
-        getContentPane().add(lblNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 50, -1));
+        add(lblNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
 
         txtNombreVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        getContentPane().add(txtNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, 140, -1));
+        txtNombreVendedor.setBorder(null);
+        add(txtNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 140, -1));
 
         lblSexoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblSexoVendedor.setText("Sexo :");
-        getContentPane().add(lblSexoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 50, -1));
+        add(lblSexoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 50, -1));
 
         txtSexoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtSexoVendedor.setBorder(null);
         txtSexoVendedor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSexoVendedorActionPerformed(evt);
             }
         });
-        getContentPane().add(txtSexoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 140, -1));
+        add(txtSexoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 140, -1));
 
         lblDomicilioVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblDomicilioVendedor.setText("Domicilio :");
-        getContentPane().add(lblDomicilioVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
+        add(lblDomicilioVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 50, -1));
 
         txtDomicilioVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        getContentPane().add(txtDomicilioVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 140, -1));
+        txtDomicilioVendedor.setBorder(null);
+        add(txtDomicilioVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, -1));
 
         lblCorreoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblCorreoVendedor.setText("Correo :");
-        getContentPane().add(lblCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 50, -1));
+        add(lblCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 50, -1));
 
         txtCorreoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        getContentPane().add(txtCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 140, -1));
+        txtCorreoVendedor.setBorder(null);
+        add(txtCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 140, -1));
 
         lblContraseñaVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblContraseñaVendedor.setText("Contraseña :");
-        getContentPane().add(lblContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 70, -1));
-
-        txtContraseñaVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        getContentPane().add(txtContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, -1));
+        add(lblContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 70, -1));
 
         lblID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         lblID.setText("ID :");
-        getContentPane().add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, 20, -1));
+        add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 20, -1));
 
         txtID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        getContentPane().add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 70, -1));
+        txtID.setBorder(null);
+        add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 70, -1));
 
         imgVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/perfil (1).png"))); // NOI18N
-        getContentPane().add(imgVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 130, 130));
+        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vendedor128px.png"))); // NOI18N
+        add(imgVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 50, 130, 130));
 
         btnBuscar.setBackground(new java.awt.Color(254, 192, 15));
         btnBuscar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
         btnBuscar.setText("Buscar");
         btnBuscar.setBorder(null);
+        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBuscarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 70, -1));
+        add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 70, -1));
 
         btnAgregar.setBackground(new java.awt.Color(254, 192, 15));
         btnAgregar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
         btnAgregar.setText("Agregar");
         btnAgregar.setBorder(null);
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAgregarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 70, -1));
+        add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, 70, -1));
 
         btnEliminar.setBackground(new java.awt.Color(254, 192, 15));
         btnEliminar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         btnEliminar.setBorder(null);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 70, -1));
+        add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 350, 70, -1));
 
-        Backgroun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoVendedores.png"))); // NOI18N
-        getContentPane().add(Backgroun, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 200, 350));
+        Backgroun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoVendedores.png"))); // NOI18N
+        Backgroun.setPreferredSize(new java.awt.Dimension(460, 670));
+        add(Backgroun, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 0, 240, 460));
 
         btnActualizar.setBackground(new java.awt.Color(254, 192, 15));
         btnActualizar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/actualizar.png"))); // NOI18N
         btnActualizar.setText("Actualizar");
         btnActualizar.setBorder(null);
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 320, 70, 20));
+        add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 410, 70, 20));
 
-        pack();
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Vendedor");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jLabel1.setOpaque(true);
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 310, 90));
+
+        txtContrasenaVendedor.setText("jPasswordField1");
+        txtContrasenaVendedor.setBorder(null);
+        add(txtContrasenaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 140, 30));
+        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 70, 10));
+        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 122, 140, 10));
+        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 140, 10));
+        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 248, 140, -1));
+        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 140, 10));
+        add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 140, 10));
     }// </editor-fold>//GEN-END:initComponents
-private void Vaciar()
-    {
-        txtNombreVendedor.setText("");
-        txtSexoVendedor.setText("");
-        txtDomicilioVendedor.setText("");
-        txtCorreoVendedor.setText("");
-        txtContraseñaVendedor.setText("");
-    }
+
+    private void txtSexoVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoVendedorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtSexoVendedorActionPerformed
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        Conexion conn = Conexion.getInstancia();
+        Conexion conn = Conexion.getInstance();
         PreparedStatement ps;
         ResultSet rs; //Guardar resultado de una consulta
-         if( txtID.getText().isEmpty())
+        if( txtID.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una categoría");
             txtID.requestFocus();
@@ -174,41 +208,41 @@ private void Vaciar()
         String consultaSQL="SELECT NombreVendedor,SexoVendedor, DomicilioVendedor, CorreoVendedor, ContrasenaVendedor FROM Vendedores WHERE idVendedor=?;";
         try
         {
-        conn.Conectar();
-        ps=conn.cadena.prepareStatement(consultaSQL);
-        ps.setInt(1,Integer.valueOf(txtID.getText()));
-        rs=ps.executeQuery();
-        if(rs.next())
-        {
-            txtNombreVendedor.setText(rs.getString(1));
-            txtSexoVendedor.setText(rs.getString(2));
-            txtDomicilioVendedor.setText(rs.getString(3));
-            txtCorreoVendedor.setText(rs.getString(4));
-            txtContraseñaVendedor.setText(rs.getString(5));
-        }
+            conn.Conectar();
+            ps=conn.cadena.prepareStatement(consultaSQL);
+            ps.setInt(1,Integer.valueOf(txtID.getText()));
+            rs=ps.executeQuery();
+            if(rs.next())
+            {
+                txtNombreVendedor.setText(rs.getString(1));
+                txtSexoVendedor.setText(rs.getString(2));
+                txtDomicilioVendedor.setText(rs.getString(3));
+                txtCorreoVendedor.setText(rs.getString(4));
+                txtContrasenaVendedor.setText(rs.getString(5));
+            }
             else
             JOptionPane.showMessageDialog(null, "No se encontro el vendedor  :( ");
-        ps.close();
-        rs.close();
-        conn.Desconectar();
-        conn.cadena.close();
-        
+            ps.close();
+            rs.close();
+            conn.Desconectar();
+            conn.cadena.close();
+
         }catch(SQLException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-            finally
-            {
+        finally
+        {
             ps=null;
             rs=null;
             conn=null;
-            }
+        }
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        Conexion conn = Conexion.getInstancia();
+        Conexion conn = Conexion.getInstance();
         PreparedStatement ps;
-         if( txtID.getText().isEmpty())
+        if( txtID.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una categoría");
             txtID.requestFocus();
@@ -219,39 +253,34 @@ private void Vaciar()
         consultaSQL +="VALUES(?,?,?,?,?,?,?)";
         try
         {
-        conn.Conectar();
-        ps=conn.cadena.prepareStatement(consultaSQL);
-        ps.setString(1,txtNombreVendedor.getText().trim());
-        ps.setString(2, txtSexoVendedor.getText().trim());
-        ps.setString(3, txtDomicilioVendedor.getText().trim()); 
-        ps.setString(4, txtCorreoVendedor.getText().trim());
-        ps.setString(5, txtContraseñaVendedor.getText().trim());
-        ps.setString(6, "imagencolores.jpg");
-        ps.setBoolean(7, true);
-        ps.execute();
-        JOptionPane.showMessageDialog(null, "El vendedor " +txtNombreVendedor.getText() + " fue registrado con éxito :)");
+            conn.Conectar();
+            ps=conn.cadena.prepareStatement(consultaSQL);
+            ps.setString(1,txtNombreVendedor.getText().trim());
+            ps.setString(2, txtSexoVendedor.getText().trim());
+            ps.setString(3, txtDomicilioVendedor.getText().trim());
+            ps.setString(4, txtCorreoVendedor.getText().trim());
+            ps.setString(5,String.valueOf(txtContrasenaVendedor.getPassword()).trim());
+            ps.setString(6, "imagencolores.jpg");
+            ps.setBoolean(7, true);
+            ps.execute();
+            JOptionPane.showMessageDialog(null, "El vendedor " +txtNombreVendedor.getText() + " fue registrado con éxito :)");
         }catch(SQLException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
         finally
-            {
+        {
             ps=null;
             conn=null;
             this.Vaciar();
-            }
-                                        
+        }
 
     }//GEN-LAST:event_btnAgregarActionPerformed
 
-    private void txtSexoVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSexoVendedorActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtSexoVendedorActionPerformed
-
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        Conexion conn = Conexion.getInstancia();
+        Conexion conn = Conexion.getInstance();
         PreparedStatement ps;
-         if( txtID.getText().isEmpty())
+        if( txtID.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una categoría");
             txtID.requestFocus();
@@ -260,39 +289,38 @@ private void Vaciar()
         String consultaSQL="DELETE FROM Vendedores WHERE idVendedor=?;";
         try
         {
-        conn.Conectar();
-        ps=conn.cadena.prepareStatement(consultaSQL);
-        ps.setInt(1,Integer.valueOf(txtID.getText()));
-        if(ps.executeUpdate()==1)
-        {
-            this.encontrado=false;
-            JOptionPane.showMessageDialog(null, "El vendedor ha sido eliminado :b");
-            
-            
-        }
+            conn.Conectar();
+            ps=conn.cadena.prepareStatement(consultaSQL);
+            ps.setInt(1,Integer.valueOf(txtID.getText()));
+            if(ps.executeUpdate()==1)
+            {
+                this.encontrado=false;
+                JOptionPane.showMessageDialog(null, "El vendedor ha sido eliminado :b");
+
+            }
             else
             JOptionPane.showMessageDialog(null, "No se encontro el vendedor  :( ");
-        ps.close();
-        
-        conn.Desconectar();
-        conn.cadena.close();
-        
+            ps.close();
+
+            conn.Desconectar();
+            conn.cadena.close();
+
         }catch(SQLException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-            finally
-            {
+        finally
+        {
             ps=null;
             conn=null;
             this.Vaciar();
-            }
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        Conexion conn = Conexion.getInstancia();
+        Conexion conn = Conexion.getInstance();
         PreparedStatement ps;
-         if( txtID.getText().isEmpty())
+        if( txtID.getText().isEmpty())
         {
             JOptionPane.showMessageDialog(null, "Debes seleccionar una categoría");
             txtID.requestFocus();
@@ -301,41 +329,49 @@ private void Vaciar()
         String consultaSQL="UPDATE Vendedores SET NombreVendedor=?, SexoVendedor=?, DomicilioVendedor=?, CorreoVendedor=?, ContrasenaVendedor=? WHERE idVendedor=?;";
         try
         {
-        conn.Conectar();
-        ps=conn.cadena.prepareStatement(consultaSQL);
-        ps.setString(1,txtNombreVendedor.getText().trim());
-        ps.setString(2,txtSexoVendedor.getText().trim());
-        ps.setString(3,txtDomicilioVendedor.getText().trim());
-        ps.setString(4,txtCorreoVendedor.getText().trim());
-        ps.setString(5,txtContraseñaVendedor.getText());
-        ps.setInt(6,Integer.valueOf(txtID.getText()));
-       
-        if(ps.executeUpdate()==1)
-        {
-            this.encontrado=false;
-            JOptionPane.showMessageDialog(null, "El vendedor ha sido actualizado :b");
-            
-            
-        }
+            conn.Conectar();
+            ps=conn.cadena.prepareStatement(consultaSQL);
+            ps.setString(1,txtNombreVendedor.getText().trim());
+            ps.setString(2,txtSexoVendedor.getText().trim());
+            ps.setString(3,txtDomicilioVendedor.getText().trim());
+            ps.setString(4,txtCorreoVendedor.getText().trim());
+            ps.setString(5,String.valueOf(txtContrasenaVendedor.getPassword()).trim());
+            ps.setInt(6,Integer.valueOf(txtID.getText()));
+
+            if(ps.executeUpdate()==1)
+            {
+                this.encontrado=false;
+                JOptionPane.showMessageDialog(null, "El vendedor ha sido actualizado :b");
+
+            }
             else
             JOptionPane.showMessageDialog(null, "No se encontro el vendedor  :( ");
-        ps.close();
-        
-        conn.Desconectar();
-        conn.cadena.close();
-        
+            ps.close();
+
+            conn.Desconectar();
+            conn.cadena.close();
+
         }catch(SQLException e)
         {
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
-            finally
-            {
+        finally
+        {
             ps=null;
             conn=null;
             this.Vaciar();
-            }
+        }
     }//GEN-LAST:event_btnActualizarActionPerformed
 
+    private void Vaciar()
+    {
+        txtNombreVendedor.setText("");
+        txtSexoVendedor.setText("");
+        txtDomicilioVendedor.setText("");
+        txtCorreoVendedor.setText("");
+        txtContrasenaVendedor.setText("");
+    }
+    
     boolean encontrado = false;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Backgroun;
@@ -344,13 +380,20 @@ private void Vaciar()
     private javax.swing.JButton btnBuscar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JLabel imgVendedor;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
     private javax.swing.JLabel lblContraseñaVendedor;
     private javax.swing.JLabel lblCorreoVendedor;
     private javax.swing.JLabel lblDomicilioVendedor;
     private javax.swing.JLabel lblID;
     private javax.swing.JLabel lblNombreVendedor;
     private javax.swing.JLabel lblSexoVendedor;
-    private javax.swing.JTextField txtContraseñaVendedor;
+    private javax.swing.JPasswordField txtContrasenaVendedor;
     private javax.swing.JTextField txtCorreoVendedor;
     private javax.swing.JTextField txtDomicilioVendedor;
     private javax.swing.JTextField txtID;

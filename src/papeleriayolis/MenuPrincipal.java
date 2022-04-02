@@ -53,6 +53,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jbMenuUsuarios.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuUsuarios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuUsuarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario (2).png"))); // NOI18N
         jbMenuUsuarios.setText("Usuarios");
         jbMenuUsuarios.setBorder(null);
         jbMenuUsuarios.setContentAreaFilled(false);
@@ -66,6 +67,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jbSalir.setBackground(new java.awt.Color(252, 195, 20));
         jbSalir.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrarsesion32px.png"))); // NOI18N
         jbSalir.setText("Salir");
         jbSalir.setBorder(null);
         jbSalir.setContentAreaFilled(false);
@@ -79,6 +81,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jbMenuPuntoCobro.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuPuntoCobro.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuPuntoCobro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/puntocobro32px.png"))); // NOI18N
         jbMenuPuntoCobro.setText("Punto de Cobro");
         jbMenuPuntoCobro.setBorder(null);
         jbMenuPuntoCobro.setContentAreaFilled(false);
@@ -97,6 +100,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jbMenuInventario.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuInventario.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/inventario (1).png"))); // NOI18N
         jbMenuInventario.setText("Inventario");
         jbMenuInventario.setBorder(null);
         jbMenuInventario.setContentAreaFilled(false);
@@ -110,6 +114,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jbMenuServicios.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuServicios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuServicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/servicios32px.png"))); // NOI18N
         jbMenuServicios.setText("Servicios");
         jbMenuServicios.setBorder(null);
         jbMenuServicios.setContentAreaFilled(false);
@@ -181,13 +186,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jbDesplegarMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDesplegarMenuActionPerformed
         int posicion = jbDesplegarMenu.getX();
-        if(posicion>5)
-        {
+        if (posicion > 5) {
             Animacion.Animacion.mover_izquierda(261, 5, 2, 2, jbDesplegarMenu);
             Animacion.Animacion.mover_izquierda(5, -261, 2, 2, jpMenu);
-        }
-        else
-        {
+        } else {
             Animacion.Animacion.mover_derecha(5, 260, 2, 2, jbDesplegarMenu);
             Animacion.Animacion.mover_derecha(-260, 0, 2, 2, jpMenu);
         }
@@ -199,8 +201,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jbMenuInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuInventarioMouseClicked
         hide();
-        MenuInventario obmi = new MenuInventario();
-        obmi.setVisible(true);
+        MenuInventario obmu = new MenuInventario();
+        obmu.setVisible(true);
     }//GEN-LAST:event_jbMenuInventarioMouseClicked
 
     private void jbMenuPuntoCobroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuPuntoCobroActionPerformed
@@ -208,19 +210,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbMenuPuntoCobroActionPerformed
 
     private void jbMenuPuntoCobroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuPuntoCobroMouseClicked
-        dispose();
+        hide();
         MenuPuntoCobro obmpc = new MenuPuntoCobro();
         obmpc.setVisible(true);
     }//GEN-LAST:event_jbMenuPuntoCobroMouseClicked
 
     private void jbMenuServiciosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuServiciosMouseClicked
-        dispose();
+        hide();
         MenuServicios obms = new MenuServicios();
         obms.setVisible(true);
     }//GEN-LAST:event_jbMenuServiciosMouseClicked
 
     private void jbMenuUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuUsuariosMouseClicked
-        dispose();
+        hide();
         MenuUsuarios obmu = new MenuUsuarios();
         obmu.setVisible(true);
     }//GEN-LAST:event_jbMenuUsuariosMouseClicked

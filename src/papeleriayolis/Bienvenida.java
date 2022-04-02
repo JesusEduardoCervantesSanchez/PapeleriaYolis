@@ -3,12 +3,12 @@ package papeleriayolis;
 
 import java.awt.Color;
 
-
 public class Bienvenida extends javax.swing.JFrame {
 
    int xmouse,ymouse;
     public Bienvenida() {
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -36,7 +36,6 @@ public class Bienvenida extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(390, 280));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -59,6 +58,7 @@ public class Bienvenida extends javax.swing.JFrame {
 
         Exit.setBackground(new java.awt.Color(255, 255, 255));
 
+        btnSalida.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         btnSalida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnSalida.setText("X");
         btnSalida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -102,24 +102,30 @@ public class Bienvenida extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 393, 34));
+        jPanel1.add(Panel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 393, 40));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Roboto Black", 0, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Agency FB", 1, 24)); // NOI18N
         jLabel2.setText("Bienvenidos");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 52, 183, 31));
 
+        jLabel3.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         jLabel3.setText("Como deseas ingresar?");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 101, 183, 41));
 
         btnUsuario.setBackground(new java.awt.Color(5, 156, 225));
 
-        txtusu.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        txtusu.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         txtusu.setForeground(new java.awt.Color(255, 255, 255));
-        txtusu.setText("         Usuario");
+        txtusu.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        txtusu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario (2).png"))); // NOI18N
+        txtusu.setText("Usuario   ");
         txtusu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtusu.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        txtusu.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         txtusu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtusuMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 txtusuMouseEntered(evt);
             }
@@ -132,23 +138,30 @@ public class Bienvenida extends javax.swing.JFrame {
         btnUsuario.setLayout(btnUsuarioLayout);
         btnUsuarioLayout.setHorizontalGroup(
             btnUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(txtusu, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+            .addGroup(btnUsuarioLayout.createSequentialGroup()
+                .addComponent(txtusu, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         btnUsuarioLayout.setVerticalGroup(
             btnUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(txtusu, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
         );
 
-        jPanel1.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 152, -1, -1));
+        jPanel1.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 152, 100, -1));
 
         btnVendedor.setBackground(new java.awt.Color(5, 156, 225));
 
-        txtvende.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        txtvende.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         txtvende.setForeground(new java.awt.Color(255, 255, 255));
-        txtvende.setText("        Vendedor");
+        txtvende.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtvende.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vendedor.png"))); // NOI18N
+        txtvende.setText("Vendedor");
         txtvende.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        txtvende.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        txtvende.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         txtvende.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtvendeMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 txtvendeMouseEntered(evt);
             }
@@ -230,6 +243,18 @@ public class Bienvenida extends javax.swing.JFrame {
     private void txtvendeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtvendeMouseExited
         btnVendedor.setBackground(new Color(5,156,225));
     }//GEN-LAST:event_txtvendeMouseExited
+
+    private void txtusuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuMouseClicked
+        hide();
+        LoginCliente oblc = new LoginCliente();
+        oblc.setVisible(true);
+    }//GEN-LAST:event_txtusuMouseClicked
+
+    private void txtvendeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtvendeMouseClicked
+        hide();
+        LoginUsuario oblu = new LoginUsuario();
+        oblu.setVisible(true);
+    }//GEN-LAST:event_txtvendeMouseClicked
 
     /**
      * @param args the command line arguments

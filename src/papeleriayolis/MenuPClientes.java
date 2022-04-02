@@ -4,16 +4,18 @@
  */
 package papeleriayolis;
 
+import java.awt.Color;
+
 /**
  *
  * @author CSjes
  */
-public class MenuInventario extends javax.swing.JFrame {
+public class MenuPClientes extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu
      */
-    public MenuInventario() {
+    public MenuPClientes() {
         initComponents();
         this.setLocationRelativeTo(this);
     }
@@ -29,15 +31,13 @@ public class MenuInventario extends javax.swing.JFrame {
 
         jPanel5 = new javax.swing.JPanel();
         jpMenu = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
-        jbRegresarMP = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        jbMenuUsuarios = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
+        jbMenuServicios = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
-        jpAlmacenador = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 159, 220));
@@ -49,76 +49,59 @@ public class MenuInventario extends javax.swing.JFrame {
         jpMenu.setBackground(new java.awt.Color(252, 195, 20));
         jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(252, 195, 20));
-        jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/agregar32px.png"))); // NOI18N
-        jButton2.setText("Agregar Categoria");
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
-
-        jbRegresarMP.setBackground(new java.awt.Color(252, 195, 20));
-        jbRegresarMP.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jbRegresarMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hogar32px.png"))); // NOI18N
-        jbRegresarMP.setText("Regresar al menu principal");
-        jbRegresarMP.setBorder(null);
-        jbRegresarMP.setContentAreaFilled(false);
-        jbRegresarMP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jbRegresarMP.addMouseListener(new java.awt.event.MouseAdapter() {
+        jbMenuUsuarios.setBackground(new java.awt.Color(252, 195, 20));
+        jbMenuUsuarios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuUsuarios.setText("Productos");
+        jbMenuUsuarios.setBorder(null);
+        jbMenuUsuarios.setContentAreaFilled(false);
+        jbMenuUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbMenuUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbRegresarMPMouseClicked(evt);
+                jbMenuUsuariosMouseClicked(evt);
             }
         });
-        jbRegresarMP.addActionListener(new java.awt.event.ActionListener() {
+        jbMenuUsuarios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbRegresarMPActionPerformed(evt);
+                jbMenuUsuariosActionPerformed(evt);
             }
         });
-        jpMenu.add(jbRegresarMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 445, 260, 40));
+        jpMenu.add(jbMenuUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 260, 40));
 
-        jButton6.setBackground(new java.awt.Color(252, 195, 20));
-        jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/management_inventory_icon_216505 (1).png"))); // NOI18N
-        jButton6.setText("Inventario");
-        jButton6.setBorder(null);
-        jButton6.setContentAreaFilled(false);
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        jbSalir.setBackground(new java.awt.Color(252, 195, 20));
+        jbSalir.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbSalir.setText("Salir");
+        jbSalir.setBorder(null);
+        jbSalir.setContentAreaFilled(false);
+        jbSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                jbSalirActionPerformed(evt);
             }
         });
-        jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 260, 40));
+        jpMenu.add(jbSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 260, 40));
+
+        jbMenuServicios.setBackground(new java.awt.Color(252, 195, 20));
+        jbMenuServicios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbMenuServicios.setText("Servicios");
+        jbMenuServicios.setBorder(null);
+        jbMenuServicios.setContentAreaFilled(false);
+        jbMenuServicios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbMenuServicios.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jbMenuServiciosMouseClicked(evt);
+            }
+        });
+        jpMenu.add(jbMenuServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
         jLabel1.setText("Papeleria");
-        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
         jLabel2.setText("Yolis");
-        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
 
-        jButton7.setBackground(new java.awt.Color(252, 195, 20));
-        jButton7.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/visualizacion32px.png"))); // NOI18N
-        jButton7.setText("Visualizar");
-        jButton7.setBorder(null);
-        jButton7.setContentAreaFilled(false);
-        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jpMenu.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 260, 40));
-
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, -1));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
         jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
@@ -130,7 +113,7 @@ public class MenuInventario extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
@@ -138,6 +121,15 @@ public class MenuInventario extends javax.swing.JFrame {
         jbCerrrar.setText("X");
         jbCerrrar.setBorder(null);
         jbCerrrar.setContentAreaFilled(false);
+        jbCerrrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbCerrrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jbCerrrarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jbCerrrarMouseExited(evt);
+            }
+        });
         jbCerrrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbCerrrarActionPerformed(evt);
@@ -145,15 +137,11 @@ public class MenuInventario extends javax.swing.JFrame {
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
-        jpAlmacenador.setBackground(new java.awt.Color(2, 159, 220));
-        jpAlmacenador.setLayout(new javax.swing.BoxLayout(jpAlmacenador, javax.swing.BoxLayout.LINE_AXIS));
-        jPanel5.add(jpAlmacenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 670, 460));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,7 +156,7 @@ public class MenuInventario extends javax.swing.JFrame {
         if(posicion>5)
         {
             Animacion.Animacion.mover_izquierda(261, 5, 2, 2, jbDesplegarMenu);
-            Animacion.Animacion.mover_izquierda(5, -260, 2, 2, jpMenu);
+            Animacion.Animacion.mover_izquierda(5, -261, 2, 2, jpMenu);
         }
         else
         {
@@ -181,27 +169,33 @@ public class MenuInventario extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jbCerrrarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jpAlmacenador, new Productos());
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jbRegresarMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarMPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbRegresarMPActionPerformed
-
-    private void jbRegresarMPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRegresarMPMouseClicked
+    private void jbMenuServiciosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuServiciosMouseClicked
         dispose();
-        MenuPrincipal obmp = new MenuPrincipal();
-        obmp.setVisible(true);
-    }//GEN-LAST:event_jbRegresarMPMouseClicked
+        MenuServicios obms = new MenuServicios();
+        obms.setVisible(true);
+    }//GEN-LAST:event_jbMenuServiciosMouseClicked
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        new CambiaPanel(jpAlmacenador, new InventarioPapeleria());
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void jbMenuUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuUsuariosMouseClicked
+        hide();
+        MenuUsuarios obmu = new MenuUsuarios();
+        obmu.setVisible(true);
+    }//GEN-LAST:event_jbMenuUsuariosMouseClicked
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void jbCerrrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCerrrarMouseEntered
+
+    }//GEN-LAST:event_jbCerrrarMouseEntered
+
+    private void jbCerrrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbCerrrarMouseExited
+
+    }//GEN-LAST:event_jbCerrrarMouseExited
+
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_jbSalirActionPerformed
+
+    private void jbMenuUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuUsuariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbMenuUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,22 +214,14 @@ public class MenuInventario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuPClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -248,22 +234,20 @@ public class MenuInventario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuInventario().setVisible(true);
+                new MenuPClientes().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
-    private javax.swing.JButton jbRegresarMP;
-    private javax.swing.JPanel jpAlmacenador;
+    private javax.swing.JButton jbMenuServicios;
+    private javax.swing.JButton jbMenuUsuarios;
+    private javax.swing.JButton jbSalir;
     private javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables
 
