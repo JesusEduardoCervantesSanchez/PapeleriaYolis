@@ -137,7 +137,7 @@ public class Compras extends javax.swing.JPanel {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
         imgVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/management_inventory_icon_216505.png"))); // NOI18N
+        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/compras128px.png"))); // NOI18N
         jPanel1.add(imgVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 130, 130));
 
         Backgroun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/FondoVendedores.png"))); // NOI18N
