@@ -3,7 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/papeleriayolis/Productos.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/negocio/VentasControl.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/entidades/Ventas.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/datos/VentasDAO.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/presentacion/MenuPuntoCobro.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/presentacion/Ventas.java</file>
+            <file>file:/C:/Users/CSjes/Documents/NetBeansProjects/PapeleriaYolis/src/presentacion/MenuPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

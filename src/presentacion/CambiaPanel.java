@@ -1,4 +1,4 @@
-package papeleriayolis;
+package presentacion;
 
 import javax.swing.JPanel;
 
