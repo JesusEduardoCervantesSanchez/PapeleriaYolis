@@ -36,6 +36,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
+        jpAlmacenador = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 159, 220));
@@ -53,6 +54,11 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
 
         jButton3.setBackground(new java.awt.Color(252, 195, 20));
@@ -121,6 +127,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
+        jpAlmacenador.setBackground(new java.awt.Color(2, 159, 220));
+        jpAlmacenador.setLayout(new javax.swing.BoxLayout(jpAlmacenador, javax.swing.BoxLayout.LINE_AXIS));
+        jPanel5.add(jpAlmacenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, 670, 460));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -166,6 +176,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         MenuPrincipal obmp = new MenuPrincipal();
         obmp.setVisible(true);
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new CambiaPanel(jpAlmacenador, new Compras());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,6 +232,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
+    private javax.swing.JPanel jpAlmacenador;
     private javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables
 
