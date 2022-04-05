@@ -1,5 +1,5 @@
 
-package papeleriayolis;
+package presentacion;
 
 import java.awt.Color;
 

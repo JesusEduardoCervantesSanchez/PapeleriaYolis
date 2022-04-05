@@ -1,4 +1,4 @@
-package papeleriayolis;
+package presentacion;
 
 import javax.swing.table.DefaultTableModel;
 import database.Conexion;

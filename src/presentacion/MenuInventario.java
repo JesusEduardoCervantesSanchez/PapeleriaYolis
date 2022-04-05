@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/MDIApplication.java to edit this template
  */
-package papeleriayolis;
+package presentacion;
 
 /**
  *
  * @author CSjes
  */
-public class MenuPuntoCobro extends javax.swing.JFrame {
+public class MenuInventario extends javax.swing.JFrame {
 
     /**
      * Creates new form Menu
      */
-    public MenuPuntoCobro() {
+    public MenuInventario() {
         initComponents();
         this.setLocationRelativeTo(this);
     }
@@ -30,10 +30,11 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jpMenu = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jbRegresarMP = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
         jpAlmacenador = new javax.swing.JPanel();
@@ -50,7 +51,8 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(252, 195, 20));
         jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton2.setText("Mayoreo");
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/agregar32px.png"))); // NOI18N
+        jButton2.setText("Agregar Categoria");
         jButton2.setBorder(null);
         jButton2.setContentAreaFilled(false);
         jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -61,27 +63,29 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         });
         jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
 
-        jButton3.setBackground(new java.awt.Color(252, 195, 20));
-        jButton3.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton3.setText("Regresar al menu principal");
-        jButton3.setBorder(null);
-        jButton3.setContentAreaFilled(false);
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jbRegresarMP.setBackground(new java.awt.Color(252, 195, 20));
+        jbRegresarMP.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jbRegresarMP.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/hogar32px.png"))); // NOI18N
+        jbRegresarMP.setText("Regresar al menu principal");
+        jbRegresarMP.setBorder(null);
+        jbRegresarMP.setContentAreaFilled(false);
+        jbRegresarMP.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jbRegresarMP.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton3MouseClicked(evt);
+                jbRegresarMPMouseClicked(evt);
             }
         });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jbRegresarMP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jbRegresarMPActionPerformed(evt);
             }
         });
-        jpMenu.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 445, 260, 40));
+        jpMenu.add(jbRegresarMP, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 445, 260, 40));
 
         jButton6.setBackground(new java.awt.Color(252, 195, 20));
         jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton6.setText("Menudeo");
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/management_inventory_icon_216505 (1).png"))); // NOI18N
+        jButton6.setText("Inventario");
         jButton6.setBorder(null);
         jButton6.setContentAreaFilled(false);
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -90,7 +94,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 260, 40));
+        jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
         jLabel1.setText("Papeleria");
@@ -99,6 +103,20 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
         jLabel2.setText("Yolis");
         jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+
+        jButton7.setBackground(new java.awt.Color(252, 195, 20));
+        jButton7.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/visualizacion32px.png"))); // NOI18N
+        jButton7.setText("Visualizar");
+        jButton7.setBorder(null);
+        jButton7.setContentAreaFilled(false);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        jpMenu.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 260, 40));
 
         jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
 
@@ -112,7 +130,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
@@ -155,7 +173,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         else
         {
             Animacion.Animacion.mover_derecha(5, 260, 2, 2, jbDesplegarMenu);
-            Animacion.Animacion.mover_derecha(-260, 5, 2, 2, jpMenu);
+            Animacion.Animacion.mover_derecha(-260, 0, 2, 2, jpMenu);
         }
     }//GEN-LAST:event_jbDesplegarMenuActionPerformed
 
@@ -163,23 +181,27 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jbCerrrarActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new CambiaPanel(jpAlmacenador, new Productos());
+    }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jbRegresarMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarMPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jbRegresarMPActionPerformed
 
-    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+    private void jbRegresarMPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbRegresarMPMouseClicked
         dispose();
         MenuPrincipal obmp = new MenuPrincipal();
         obmp.setVisible(true);
-    }//GEN-LAST:event_jButton3MouseClicked
+    }//GEN-LAST:event_jbRegresarMPMouseClicked
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jpAlmacenador, new Compras());
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        new CambiaPanel(jpAlmacenador, new InventarioPapeleria());
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,14 +220,22 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MenuPuntoCobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MenuPuntoCobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MenuPuntoCobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MenuPuntoCobro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MenuInventario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -218,20 +248,21 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MenuPuntoCobro().setVisible(true);
+                new MenuInventario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
+    private javax.swing.JButton jbRegresarMP;
     private javax.swing.JPanel jpAlmacenador;
     private javax.swing.JPanel jpMenu;
     // End of variables declaration//GEN-END:variables
