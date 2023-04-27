@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package datos;
+package datos.interfaces;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import java.util.List;
  *
  * @author CSjes
  */
-public interface CrudSimpleInterface<T> {
+public interface CrudEmpleadosInterface<T> {
 
-    public List<T> listar(int id);// Regresa un listado de tipo list de objetos T
+    public List<T> listar(String texto);// Regresa un listado de tipo list de objetos T
     
     public boolean insertar(T obj);//Inserta un objeto del tipo T
 

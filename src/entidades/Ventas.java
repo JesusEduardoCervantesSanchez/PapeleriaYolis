@@ -4,33 +4,42 @@
  */
 package entidades;
 
+import java.sql.Date;
+import java.util.List;
+
 /**
  *
  * @author CSjes
  */
-
 public class Ventas {
- private int idVentas;
- private String numeroVenta;
- private String nombreCliente;
- private String categoriaProducto;
- private int cantidad;
- private double precioVenta;
- private String fechaVenta;
 
-    public Ventas(int idVentas, String numeroVenta, String nombreCliente, String categoriaProducto, int cantidad, double precioVenta, String fechaVenta) {
-        this.idVentas = idVentas;
-        this.numeroVenta = numeroVenta;
-        this.nombreCliente = nombreCliente;
-        this.categoriaProducto = categoriaProducto;
-        this.cantidad = cantidad;
-        this.precioVenta = precioVenta;
-        this.fechaVenta = fechaVenta;
-    }
+    private int idVentas;
+    private int idCliente;
+    private String ClienteNombre;
+    private int idEmpleado;
+    private String NombreEmpleado;
+    private String FolioVenta;
+    private Date FechaVenta;
+    private double SubTotal;
+    private double IVA;
+     private List<Pro_Ven> detalles;
 
     public Ventas() {
-        
     }
+
+    public Ventas(int idVentas, int idCliente, String ClienteNombre, int idEmpleado, String NombreEmpleado, String FolioVenta, Date FechaVenta, double SubTotal, double IVA) {
+        this.idVentas = idVentas;
+        this.idCliente = idCliente;
+        this.ClienteNombre = ClienteNombre;
+        this.idEmpleado = idEmpleado;
+        this.NombreEmpleado = NombreEmpleado;
+        this.FolioVenta = FolioVenta;
+        this.FechaVenta = FechaVenta;
+        this.SubTotal = SubTotal;
+        this.IVA = IVA;
+    }
+
+    
 
     public int getIdVentas() {
         return idVentas;
@@ -40,56 +49,80 @@ public class Ventas {
         this.idVentas = idVentas;
     }
 
-    public String getNumeroVenta() {
-        return numeroVenta;
+    public String getFolioVenta() {
+        return FolioVenta;
     }
 
-    public void setNumeroVenta(String numeroVenta) {
-        this.numeroVenta = numeroVenta;
+    public void setFolioVenta(String FolioVenta) {
+        this.FolioVenta = FolioVenta;
     }
 
-    public String getNombreCliente() {
-        return nombreCliente;
+    public Date getFechaVenta() {
+        return FechaVenta;
     }
 
-    public void setNombreCliente(String nombreCliente) {
-        this.nombreCliente = nombreCliente;
+    public void setFechaVenta(Date FechaVenta) {
+        this.FechaVenta = FechaVenta;
     }
 
-    public String getCategoriaProducto() {
-        return categoriaProducto;
+    public double getSubTotal() {
+        return SubTotal;
     }
 
-    public void setCategoriaProducto(String categoriaProducto) {
-        this.categoriaProducto = categoriaProducto;
+    public void setSubTotal(double SubTotal) {
+        this.SubTotal = SubTotal;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public double getIVA() {
+        return IVA;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setIVA(double IVA) {
+        this.IVA = IVA;
     }
 
-    public double getPrecioVenta() {
-        return precioVenta;
+    public int getIdCliente() {
+        return idCliente;
     }
 
-    public void setPrecioVenta(double precioVenta) {
-        this.precioVenta = precioVenta;
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
-    public String getFechaVenta() {
-        return fechaVenta;
+    public String getClienteNombre() {
+        return ClienteNombre;
     }
 
-    public void setFechaVenta(String fechaVenta) {
-        this.fechaVenta = fechaVenta;
+    public void setClienteNombre(String ClienteNombre) {
+        this.ClienteNombre = ClienteNombre;
     }
 
-    @Override
-    public String toString() {
-        return "Ventas{" + "idVentas=" + idVentas + ", numeroVenta=" + numeroVenta + ", nombreCliente=" + nombreCliente + ", categoriaProducto=" + categoriaProducto + ", cantidad=" + cantidad + ", precioVenta=" + precioVenta + ", fechaVenta=" + fechaVenta + '}';
+    public List<Pro_Ven> getDetalles() {
+        return detalles;
     }
+
+    public void setDetalles(List<Pro_Ven> detalles) {
+        this.detalles = detalles;
+    }
+
+    public int getIdEmpleado() {
+        return idEmpleado;
+    }
+
+    public void setIdEmpleado(int idEmpleado) {
+        this.idEmpleado = idEmpleado;
+    }
+
+    public String getNombreEmpleado() {
+        return NombreEmpleado;
+    }
+
+    public void setNombreEmpleado(String NombreEmpleado) {
+        this.NombreEmpleado = NombreEmpleado;
+    }
+    
+    
+    
 }
+
+

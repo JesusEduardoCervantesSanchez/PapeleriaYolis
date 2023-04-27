@@ -4,6 +4,8 @@
  */
 package presentacion;
 
+import javax.swing.JOptionPane;
+
 
 
 
@@ -20,6 +22,8 @@ public class MenuUsuarios extends javax.swing.JFrame {
     public MenuUsuarios() {
         initComponents();
         this.setLocationRelativeTo(this);
+         Animacion.Animacion.mover_derecha(5, 260, 2, 2, jbDesplegarMenu);
+            Animacion.Animacion.mover_derecha(-260, 0, 2, 2, jpMenu);
     }
 
     /**
@@ -39,7 +43,6 @@ public class MenuUsuarios extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         btnVendedores = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
         jpContenedor = new javax.swing.JPanel();
@@ -48,12 +51,12 @@ public class MenuUsuarios extends javax.swing.JFrame {
         setBackground(new java.awt.Color(1, 159, 220));
         setUndecorated(true);
 
-        jPanel5.setBackground(new java.awt.Color(1, 159, 220));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setMinimumSize(new java.awt.Dimension(940, 510));
         jPanel5.setPreferredSize(new java.awt.Dimension(940, 510));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setBackground(new java.awt.Color(117, 199, 255));
         jpMenu.setPreferredSize(new java.awt.Dimension(260, 510));
         jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -133,14 +136,10 @@ public class MenuUsuarios extends javax.swing.JFrame {
         jpMenu.add(btnVendedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 255, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Papeleria");
-        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoPapeleria2.jpg"))); // NOI18N
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel2.setText("Yolis");
-        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, -1, -1));
-
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, 260, 520));
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 260, 520));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
         jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
@@ -152,11 +151,10 @@ public class MenuUsuarios extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jbCerrrar.setForeground(new java.awt.Color(255, 255, 255));
         jbCerrrar.setText("X");
         jbCerrrar.setBorder(null);
         jbCerrrar.setContentAreaFilled(false);
@@ -167,7 +165,7 @@ public class MenuUsuarios extends javax.swing.JFrame {
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
-        jpContenedor.setBackground(new java.awt.Color(2, 159, 220));
+        jpContenedor.setBackground(new java.awt.Color(255, 255, 255));
         jpContenedor.setMinimumSize(new java.awt.Dimension(670, 460));
         jpContenedor.setPreferredSize(new java.awt.Dimension(670, 460));
         jpContenedor.setLayout(new javax.swing.BoxLayout(jpContenedor, javax.swing.BoxLayout.LINE_AXIS));
@@ -220,17 +218,21 @@ public class MenuUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jbRegresarMPActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        new CambiaPanel(jpContenedor, new UsuariosJPanel());
+        new CambiaPanel(jpContenedor, new Clientes());
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVendedoresActionPerformed
-        new CambiaPanel(jpContenedor, new VendedoresF());
+        new CambiaPanel(jpContenedor, new Empleados());
     }//GEN-LAST:event_btnVendedoresActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        hide();
-        CerrarSEsion obc = new CerrarSEsion();
-        obc.setVisible(true);
+        if((JOptionPane.showConfirmDialog(this, "¿Seguro que desea cerrar sesión?", "Cerrar Sesión", JOptionPane.YES_NO_OPTION))==0)
+        {
+            this.dispose();
+            Bienvenida objb = new Bienvenida();
+            objb.setVisible(true);
+            
+        }
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -281,7 +283,6 @@ public class MenuUsuarios extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;

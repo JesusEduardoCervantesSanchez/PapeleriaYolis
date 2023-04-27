@@ -35,7 +35,6 @@ public class MenuPClientes extends javax.swing.JFrame {
         jbSalir = new javax.swing.JButton();
         jbMenuServicios = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
 
@@ -43,10 +42,10 @@ public class MenuPClientes extends javax.swing.JFrame {
         setBackground(new java.awt.Color(1, 159, 220));
         setUndecorated(true);
 
-        jPanel5.setBackground(new java.awt.Color(1, 159, 220));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setBackground(new java.awt.Color(117, 207, 247));
         jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbMenuUsuarios.setBackground(new java.awt.Color(252, 195, 20));
@@ -94,14 +93,10 @@ public class MenuPClientes extends javax.swing.JFrame {
         jpMenu.add(jbMenuServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Papeleria");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoPapeleria2.jpg"))); // NOI18N
         jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel2.setText("Yolis");
-        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
-
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, -1));
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
         jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
@@ -113,11 +108,10 @@ public class MenuPClientes extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jbCerrrar.setForeground(new java.awt.Color(255, 255, 255));
         jbCerrrar.setText("X");
         jbCerrrar.setBorder(null);
         jbCerrrar.setContentAreaFilled(false);
@@ -170,9 +164,7 @@ public class MenuPClientes extends javax.swing.JFrame {
     }//GEN-LAST:event_jbCerrrarActionPerformed
 
     private void jbMenuServiciosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuServiciosMouseClicked
-        dispose();
-        MenuServicios obms = new MenuServicios();
-        obms.setVisible(true);
+
     }//GEN-LAST:event_jbMenuServiciosMouseClicked
 
     private void jbMenuUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuUsuariosMouseClicked
@@ -241,7 +233,6 @@ public class MenuPClientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;

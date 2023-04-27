@@ -113,10 +113,9 @@ public class Bienvenida extends javax.swing.JFrame {
         jLabel3.setText("Como deseas ingresar?");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 101, 183, 41));
 
-        btnUsuario.setBackground(new java.awt.Color(5, 156, 225));
+        btnUsuario.setBackground(new java.awt.Color(255, 164, 58));
 
         txtusu.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        txtusu.setForeground(new java.awt.Color(255, 255, 255));
         txtusu.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         txtusu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario (2).png"))); // NOI18N
         txtusu.setText("Usuario   ");
@@ -149,10 +148,9 @@ public class Bienvenida extends javax.swing.JFrame {
 
         jPanel1.add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 152, 100, -1));
 
-        btnVendedor.setBackground(new java.awt.Color(5, 156, 225));
+        btnVendedor.setBackground(new java.awt.Color(255, 164, 58));
 
         txtvende.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        txtvende.setForeground(new java.awt.Color(255, 255, 255));
         txtvende.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         txtvende.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vendedor.png"))); // NOI18N
         txtvende.setText("Vendedor");
@@ -182,8 +180,6 @@ public class Bienvenida extends javax.swing.JFrame {
         );
 
         jPanel1.add(btnVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 203, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Fondo3.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 390, 240));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -229,19 +225,19 @@ public class Bienvenida extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSalidaMouseExited
 
     private void txtusuMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuMouseEntered
-        btnUsuario.setBackground(new Color(7,173,223));
+
     }//GEN-LAST:event_txtusuMouseEntered
 
     private void txtusuMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuMouseExited
-        btnUsuario.setBackground(new Color(5,156,225));
+
     }//GEN-LAST:event_txtusuMouseExited
 
     private void txtvendeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtvendeMouseEntered
-        btnVendedor.setBackground(new Color(7,173,223));
+
     }//GEN-LAST:event_txtvendeMouseEntered
 
     private void txtvendeMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtvendeMouseExited
-        btnVendedor.setBackground(new Color(5,156,225));
+
     }//GEN-LAST:event_txtvendeMouseExited
 
     private void txtusuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtusuMouseClicked

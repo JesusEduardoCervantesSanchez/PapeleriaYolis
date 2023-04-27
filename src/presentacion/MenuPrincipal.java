@@ -4,8 +4,6 @@
  */
 package presentacion;
 
-
-
 /**
  *
  * @author CSjes
@@ -18,6 +16,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     public MenuPrincipal() {
         initComponents();
         this.setLocationRelativeTo(this);
+        Animacion.Animacion.mover_izquierda(261, 5, 2, 2, jbDesplegarMenu);
+        Animacion.Animacion.mover_izquierda(5, -261, 2, 2, jpMenu);
+        lblMarcaA.setVisible(true);
     }
 
     /**
@@ -35,20 +36,19 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jbSalir = new javax.swing.JButton();
         jbMenuPuntoCobro = new javax.swing.JButton();
         jbMenuInventario = new javax.swing.JButton();
-        jbMenuServicios = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
+        lblMarcaA = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(1, 159, 220));
         setUndecorated(true);
 
-        jPanel5.setBackground(new java.awt.Color(1, 159, 220));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setBackground(new java.awt.Color(117, 199, 255));
         jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jbMenuUsuarios.setBackground(new java.awt.Color(252, 195, 20));
@@ -96,7 +96,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jbMenuPuntoCobroActionPerformed(evt);
             }
         });
-        jpMenu.add(jbMenuPuntoCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 260, 40));
+        jpMenu.add(jbMenuPuntoCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 260, 40));
 
         jbMenuInventario.setBackground(new java.awt.Color(252, 195, 20));
         jbMenuInventario.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -110,31 +110,18 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jbMenuInventarioMouseClicked(evt);
             }
         });
-        jpMenu.add(jbMenuInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 260, 40));
-
-        jbMenuServicios.setBackground(new java.awt.Color(252, 195, 20));
-        jbMenuServicios.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jbMenuServicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/servicios32px.png"))); // NOI18N
-        jbMenuServicios.setText("Servicios");
-        jbMenuServicios.setBorder(null);
-        jbMenuServicios.setContentAreaFilled(false);
-        jbMenuServicios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jbMenuServicios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jbMenuServiciosMouseClicked(evt);
+        jbMenuInventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMenuInventarioActionPerformed(evt);
             }
         });
-        jpMenu.add(jbMenuServicios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 260, 40));
+        jpMenu.add(jbMenuInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Papeleria");
-        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoPapeleria2.jpg"))); // NOI18N
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel2.setText("Yolis");
-        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, -1, -1));
-
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, -1));
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
         jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
@@ -146,11 +133,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jbCerrrar.setForeground(new java.awt.Color(255, 255, 255));
         jbCerrrar.setText("X");
         jbCerrrar.setBorder(null);
         jbCerrrar.setContentAreaFilled(false);
@@ -169,6 +155,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
+
+        lblMarcaA.setFont(new java.awt.Font("Segoe UI Black", 1, 48)); // NOI18N
+        lblMarcaA.setForeground(new java.awt.Color(204, 204, 204));
+        lblMarcaA.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblMarcaA.setText("Papeleria Yolis");
+        jPanel5.add(lblMarcaA, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -4, 940, 520));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -189,9 +181,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
         if (posicion > 5) {
             Animacion.Animacion.mover_izquierda(261, 5, 2, 2, jbDesplegarMenu);
             Animacion.Animacion.mover_izquierda(5, -261, 2, 2, jpMenu);
+            lblMarcaA.setVisible(true);
         } else {
             Animacion.Animacion.mover_derecha(5, 260, 2, 2, jbDesplegarMenu);
             Animacion.Animacion.mover_derecha(-260, 0, 2, 2, jpMenu);
+            lblMarcaA.setVisible(false);
         }
     }//GEN-LAST:event_jbDesplegarMenuActionPerformed
 
@@ -212,16 +206,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jbMenuPuntoCobroActionPerformed
 
     private void jbMenuPuntoCobroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuPuntoCobroMouseClicked
-        hide();
-        MenuPuntoCobro obmpc = new MenuPuntoCobro();
-        obmpc.setVisible(true);
-    }//GEN-LAST:event_jbMenuPuntoCobroMouseClicked
 
-    private void jbMenuServiciosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuServiciosMouseClicked
-        hide();
-        MenuServicios obms = new MenuServicios();
-        obms.setVisible(true);
-    }//GEN-LAST:event_jbMenuServiciosMouseClicked
+    }//GEN-LAST:event_jbMenuPuntoCobroMouseClicked
 
     private void jbMenuUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jbMenuUsuariosMouseClicked
         hide();
@@ -240,6 +226,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSalirActionPerformed
+
+    private void jbMenuInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMenuInventarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbMenuInventarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -281,16 +271,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;
     private javax.swing.JButton jbMenuInventario;
     private javax.swing.JButton jbMenuPuntoCobro;
-    private javax.swing.JButton jbMenuServicios;
     private javax.swing.JButton jbMenuUsuarios;
     private javax.swing.JButton jbSalir;
     private javax.swing.JPanel jpMenu;
+    private javax.swing.JLabel lblMarcaA;
     // End of variables declaration//GEN-END:variables
 
 }

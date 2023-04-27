@@ -4,6 +4,8 @@
  */
 package presentacion;
 
+import Presentacion.Compras;
+
 /**
  *
  * @author CSjes
@@ -29,11 +31,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
 
         jPanel5 = new javax.swing.JPanel();
         jpMenu = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
+        btnCompras = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jbDesplegarMenu = new javax.swing.JButton();
         jbCerrrar = new javax.swing.JButton();
         jpAlmacenador = new javax.swing.JPanel();
@@ -42,19 +43,25 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         setBackground(new java.awt.Color(1, 159, 220));
         setUndecorated(true);
 
-        jPanel5.setBackground(new java.awt.Color(1, 159, 220));
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpMenu.setBackground(new java.awt.Color(252, 195, 20));
+        jpMenu.setBackground(new java.awt.Color(117, 199, 255));
         jpMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setBackground(new java.awt.Color(252, 195, 20));
-        jButton2.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
-        jButton2.setText("Mayoreo");
-        jButton2.setBorder(null);
-        jButton2.setContentAreaFilled(false);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jpMenu.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
+        btnCompras.setBackground(new java.awt.Color(252, 195, 20));
+        btnCompras.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
+        btnCompras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/verificar.png"))); // NOI18N
+        btnCompras.setText("Compras");
+        btnCompras.setBorder(null);
+        btnCompras.setContentAreaFilled(false);
+        btnCompras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnCompras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComprasActionPerformed(evt);
+            }
+        });
+        jpMenu.add(btnCompras, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 387, 260, 40));
 
         jButton3.setBackground(new java.awt.Color(252, 195, 20));
         jButton3.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
@@ -77,7 +84,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jButton6.setBackground(new java.awt.Color(252, 195, 20));
         jButton6.setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ventas (1).png"))); // NOI18N
-        jButton6.setText("Menudeo");
+        jButton6.setText("Ventas");
         jButton6.setBorder(null);
         jButton6.setContentAreaFilled(false);
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -89,14 +96,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         jpMenu.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 329, 260, 40));
 
         jLabel1.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel1.setText("Papeleria");
-        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/LogoPapeleria2.jpg"))); // NOI18N
+        jpMenu.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Blackadder ITC", 0, 36)); // NOI18N
-        jLabel2.setText("Yolis");
-        jpMenu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
-
-        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 0, -1, 520));
+        jPanel5.add(jpMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 520));
 
         jbDesplegarMenu.setBackground(new java.awt.Color(1, 159, 220));
         jbDesplegarMenu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu_icon_2_icon-icons.com_71856.png"))); // NOI18N
@@ -108,11 +111,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
                 jbDesplegarMenuActionPerformed(evt);
             }
         });
-        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, 40));
+        jPanel5.add(jbDesplegarMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(261, 0, 40, 40));
 
         jbCerrrar.setBackground(new java.awt.Color(2, 159, 220));
         jbCerrrar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        jbCerrrar.setForeground(new java.awt.Color(255, 255, 255));
         jbCerrrar.setText("X");
         jbCerrrar.setBorder(null);
         jbCerrrar.setContentAreaFilled(false);
@@ -123,7 +125,7 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         });
         jPanel5.add(jbCerrrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 40, 40));
 
-        jpAlmacenador.setBackground(new java.awt.Color(2, 159, 220));
+        jpAlmacenador.setBackground(new java.awt.Color(255, 255, 255));
         jpAlmacenador.setPreferredSize(new java.awt.Dimension(670, 460));
         jpAlmacenador.setLayout(new javax.swing.BoxLayout(jpAlmacenador, javax.swing.BoxLayout.LINE_AXIS));
         jPanel5.add(jpAlmacenador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
@@ -174,6 +176,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
         obmp.setVisible(true);
     }//GEN-LAST:event_jButton3MouseClicked
 
+    private void btnComprasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprasActionPerformed
+        new CambiaPanel(jpAlmacenador, new Compras());
+    }//GEN-LAST:event_btnComprasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -217,11 +223,10 @@ public class MenuPuntoCobro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnCompras;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCerrrar;
     private javax.swing.JButton jbDesplegarMenu;

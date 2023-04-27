@@ -4,11 +4,11 @@
  */
 package presentacion;
 
+import negocio.ProvedorControl;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import database.Conexion;
 
 /**
  *
@@ -19,8 +19,34 @@ public class Provedor extends javax.swing.JPanel {
     /**
      * Creates new form Provedor
      */
+    private final ProvedorControl Control;
+    String accion;
+    private String nombreant;
+    private String[] cosas = new String[8];
+
     public Provedor() {
         initComponents();
+        Control = new ProvedorControl();
+        ListarProvedor("");
+        BtnGuardar.setVisible(false);
+        btnVolver.setVisible(false);
+        txtNombre.setVisible(false);
+        txtCodigo.setVisible(false);
+        txtTelefono.setVisible(false);
+        txtCorreo.setVisible(false);
+        txtEmpresa.setVisible(false);
+    }
+
+    public void ListarProvedor(String texto) {
+        tablaListado.setModel(Control.Listar(texto));
+    }
+
+    public void MensajeOK(String Mensaje) {
+        JOptionPane.showMessageDialog(this, Mensaje, "Papeleria Yolis", JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public void MensajeError(String Mensaje) {
+        JOptionPane.showMessageDialog(this, Mensaje, "Papeleria Yolis", JOptionPane.ERROR_MESSAGE);
     }
 
     /**
@@ -32,51 +58,160 @@ public class Provedor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lblNombreVendedor = new javax.swing.JLabel();
-        txtNombre = new javax.swing.JTextField();
-        lblcodigo = new javax.swing.JLabel();
-        txtCodigo = new javax.swing.JTextField();
-        lbltelefono = new javax.swing.JLabel();
-        txtTelefono = new javax.swing.JTextField();
-        lblCorreoVendedor = new javax.swing.JLabel();
-        txtCorreo = new javax.swing.JTextField();
-        lblContraseñaVendedor = new javax.swing.JLabel();
-        txtProducto = new javax.swing.JTextField();
-        lblID = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
-        imgVendedor = new javax.swing.JLabel();
-        btnBuscar = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
-        btnEliminar = new javax.swing.JButton();
-        btnActualizar = new javax.swing.JButton();
-        Backgroun = new javax.swing.JLabel();
-        txtCantidad = new javax.swing.JTextField();
-        lblCantidad = new javax.swing.JLabel();
+        TabProvedor = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tablaListado = new javax.swing.JTable();
+        btnNuevo = new javax.swing.JButton();
+        lblBusqueda = new javax.swing.JLabel();
+        txtBusqueda = new javax.swing.JTextField();
+        btnBuscar1 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
+        btnEditar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        TabOperaciones = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        txtCodigo = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtCorreo = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        txtEmpresa = new javax.swing.JTextField();
+        ID = new javax.swing.JLabel();
+        txtID = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
-        jSeparator7 = new javax.swing.JSeparator();
-        jSeparator8 = new javax.swing.JSeparator();
+        btnVolver = new javax.swing.JButton();
+        BtnGuardar = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+
+        TabProvedor.setBackground(new java.awt.Color(255, 255, 255));
+        TabProvedor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/perfil (1).png"))); // NOI18N
+        TabProvedor.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 130, 140));
+
+        jLabel1.setFont(new java.awt.Font("Agency FB", 0, 48)); // NOI18N
+        jLabel1.setText("Proveedores");
+        TabProvedor.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo formulario.jpg"))); // NOI18N
+        TabProvedor.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 170, 460));
+
+        tablaListado.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tablaListado);
+
+        TabProvedor.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, 260));
+
+        btnNuevo.setBackground(new java.awt.Color(255, 191, 117));
+        btnNuevo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
+        btnNuevo.setText("Nuevo");
+        btnNuevo.setBorder(null);
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
+        TabProvedor.add(btnNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, 120, -1));
+
+        lblBusqueda.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        lblBusqueda.setText("Busqueda");
+        TabProvedor.add(lblBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 50, -1));
+
+        txtBusqueda.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtBusqueda.setBorder(null);
+        txtBusqueda.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtBusquedaKeyReleased(evt);
+            }
+        });
+        TabProvedor.add(txtBusqueda, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 230, -1));
+
+        btnBuscar1.setBackground(new java.awt.Color(255, 191, 117));
+        btnBuscar1.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnBuscar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
+        btnBuscar1.setBorder(null);
+        btnBuscar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscar1ActionPerformed(evt);
+            }
+        });
+        TabProvedor.add(btnBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 97, 70, 20));
+        TabProvedor.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 220, 10));
+
+        btnEditar.setBackground(new java.awt.Color(255, 191, 117));
+        btnEditar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
+        btnEditar.setText("Editar");
+        btnEditar.setBorder(null);
+        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarActionPerformed(evt);
+            }
+        });
+        TabProvedor.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 120, -1));
+
+        btnEliminar.setBackground(new java.awt.Color(255, 191, 117));
+        btnEliminar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
+        btnEliminar.setText("Eliminar");
+        btnEliminar.setBorder(null);
+        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEliminarActionPerformed(evt);
+            }
+        });
+        TabProvedor.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 110, 20));
+
+        TabOperaciones.setBackground(new java.awt.Color(255, 255, 255));
+        TabOperaciones.setMinimumSize(new java.awt.Dimension(670, 460));
+        TabOperaciones.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblNombreVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblNombreVendedor.setText("Nombre :");
-        jPanel1.add(lblNombreVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 50, -1));
+        jLabel2.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        jLabel2.setText("Codigo:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
-        txtNombre.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        txtNombre.setBorder(null);
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 140, -1));
+        jLabel4.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        jLabel4.setText("Nombre:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
 
-        lblcodigo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblcodigo.setText("Codigo :");
-        jPanel1.add(lblcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 50, -1));
+        jLabel5.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        jLabel5.setText("Telefono:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+
+        jLabel6.setFont(new java.awt.Font("Agency FB", 0, 48)); // NOI18N
+        jLabel6.setText("Proveedor");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 13, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        jLabel7.setText("Empresa:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        jLabel8.setText("Correo:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         txtCodigo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         txtCodigo.setBorder(null);
@@ -85,320 +220,284 @@ public class Provedor extends javax.swing.JPanel {
                 txtCodigoActionPerformed(evt);
             }
         });
-        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 140, -1));
+        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 232, -1));
 
-        lbltelefono.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lbltelefono.setText("Telefono :");
-        jPanel1.add(lbltelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 50, -1));
-
-        txtTelefono.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        txtTelefono.setBorder(null);
-        jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, -1));
-
-        lblCorreoVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblCorreoVendedor.setText("Correo :");
-        jPanel1.add(lblCorreoVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 50, -1));
+        txtNombre.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtNombre.setBorder(null);
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(105, 108, 232, -1));
 
         txtCorreo.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         txtCorreo.setBorder(null);
-        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 140, -1));
+        jPanel1.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(99, 250, 232, -1));
 
-        lblContraseñaVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblContraseñaVendedor.setText("Producto :");
-        jPanel1.add(lblContraseñaVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 70, -1));
+        txtTelefono.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtTelefono.setBorder(null);
+        jPanel1.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 197, 232, -1));
 
-        txtProducto.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        txtProducto.setBorder(null);
-        jPanel1.add(txtProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, 140, -1));
+        txtEmpresa.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        txtEmpresa.setBorder(null);
+        jPanel1.add(txtEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(106, 297, 232, -1));
 
-        lblID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblID.setText("ID :");
-        jPanel1.add(lblID, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 20, -1));
+        ID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        ID.setText("ID");
+        jPanel1.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
 
+        txtID.setEditable(false);
         txtID.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
         txtID.setBorder(null);
-        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 350, 70, -1));
-
-        imgVendedor.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        imgVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/perfil (1).png"))); // NOI18N
-        jPanel1.add(imgVendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 40, 130, 130));
-
-        btnBuscar.setBackground(new java.awt.Color(254, 192, 15));
-        btnBuscar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buscar.png"))); // NOI18N
-        btnBuscar.setText("Buscar");
-        btnBuscar.setBorder(null);
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+        txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
+                txtIDActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 390, 70, -1));
+        jPanel1.add(txtID, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 40, 40, -1));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 240, -1));
+        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 240, 20));
+        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 240, 20));
+        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 240, 20));
+        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 240, 20));
 
-        btnAgregar.setBackground(new java.awt.Color(254, 192, 15));
-        btnAgregar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
-        btnAgregar.setText("Agregar");
-        btnAgregar.setBorder(null);
-        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+        btnVolver.setBackground(new java.awt.Color(255, 191, 117));
+        btnVolver.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        btnVolver.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/actualizar.png"))); // NOI18N
+        btnVolver.setText("Volver");
+        btnVolver.setBorder(null);
+        btnVolver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
+                btnVolverActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, 70, -1));
+        jPanel1.add(btnVolver, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 340, 100, 30));
 
-        btnEliminar.setBackground(new java.awt.Color(254, 192, 15));
-        btnEliminar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
-        btnEliminar.setText("Eliminar");
-        btnEliminar.setBorder(null);
-        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+        BtnGuardar.setBackground(new java.awt.Color(255, 191, 117));
+        BtnGuardar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
+        BtnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/boton-agregar.png"))); // NOI18N
+        BtnGuardar.setText("Guardar");
+        BtnGuardar.setBorder(null);
+        BtnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
+                BtnGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, 70, -1));
+        jPanel1.add(BtnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 100, 30));
 
-        btnActualizar.setBackground(new java.awt.Color(254, 192, 15));
-        btnActualizar.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/actualizar.png"))); // NOI18N
-        btnActualizar.setText("Actualizar");
-        btnActualizar.setBorder(null);
-        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnActualizar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 420, 70, 20));
+        TabOperaciones.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 450));
 
-        Backgroun.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/FondoVendedores.png"))); // NOI18N
-        jPanel1.add(Backgroun, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 0, 240, 460));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/perfil (1).png"))); // NOI18N
+        TabOperaciones.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 40, 130, 140));
 
-        txtCantidad.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        txtCantidad.setBorder(null);
-        txtCantidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCantidadActionPerformed(evt);
-            }
-        });
-        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 310, 140, -1));
-
-        lblCantidad.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        lblCantidad.setText("Cantidad :");
-        jPanel1.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 70, -1));
-
-        jLabel1.setFont(new java.awt.Font("Agency FB", 0, 48)); // NOI18N
-        jLabel1.setText("Proveedor");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 70, 10));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 140, 10));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 250, 140, 10));
-        jPanel1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 140, 10));
-        jPanel1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 140, 10));
-        jPanel1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 140, 10));
-        jPanel1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 140, 10));
-        jPanel1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 340, 140, 10));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo formulario.jpg"))); // NOI18N
+        TabOperaciones.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, 170, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 669, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(TabProvedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TabOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(TabProvedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(TabOperaciones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        Conexion conn = Conexion.getInstance();
-        encontrado = false;
-        PreparedStatement ps;
-        ResultSet rs;
-        String consultaSQL = "select nombreProvedor,codigoProvedor,telefonoProvedor,correoProvedor,producto,cantidad from Provedores where idProvedores=?;";
-        try {
-            conn.Conectar();
-            ps = conn.cadena.prepareStatement(consultaSQL);
-            ps.setInt(1, Integer.valueOf(txtID.getText()));
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                this.encontrado = true;
-                txtNombre.setText(rs.getString(1));
-                txtCodigo.setText(rs.getString(2));
-                txtTelefono.setText(rs.getString(3));
-                txtCorreo.setText(rs.getString(4));
-                txtProducto.setText(rs.getString(5));
-                txtCantidad.setText(rs.getString(6));
-            } else {
-                JOptionPane.showMessageDialog(null, "No se encontro al provedor");
-            }
-            rs.close();
-            ps.close();
-            conn.Desconectar();
-            conn.cadena.close();
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+        TabProvedor.setVisible(false);
+        TabOperaciones.setVisible(true);
+        accion = "guardar";
+        BtnGuardar.setText("Guardar");
+        ID.setVisible(false);
+        txtID.setVisible(false);
+        BtnGuardar.setVisible(true);
+        btnVolver.setVisible(true);
+        txtNombre.setVisible(true);
+        txtCodigo.setVisible(true);
+        txtTelefono.setVisible(true);
+        txtCorreo.setVisible(true);
+        txtEmpresa.setVisible(true);
+    }//GEN-LAST:event_btnNuevoActionPerformed
 
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        } finally {
-            ps = null;
-            conn = null;
-            rs = null;
-        }
+    private void txtBusquedaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBusquedaKeyReleased
 
-    }//GEN-LAST:event_btnBuscarActionPerformed
+    }//GEN-LAST:event_txtBusquedaKeyReleased
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        Conexion conn = Conexion.getInstance();
-        PreparedStatement ps;
-        String consultaSQL = "insert into Provedores(nombreProvedor, codigoProvedor, telefonoProvedor, correoProvedor, producto,cantidad, activo )\n"
-                + "values(?,?,?,?,?,?,?) ;";
-        try {
-            conn.Conectar();
-            ps = conn.cadena.prepareStatement(consultaSQL);
-            ps.setString(1, txtNombre.getText().trim());
-            ps.setInt(2, Integer.parseInt(txtCodigo.getText()));
-            ps.setString(3, txtTelefono.getText());
-            ps.setString(4, txtCorreo.getText());
-            ps.setString(5, txtProducto.getText().trim());
-            ps.setInt(6, Integer.parseInt(txtCantidad.getText()));
-            ps.setBoolean(7, true);
-            ps.execute();
-            ps.close();
-            conn.Desconectar();
-            conn.cadena.close();
-            JOptionPane.showMessageDialog(null, "Nuevo proveor registrado");
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        } finally {
-            ps = null;
-            conn = null;
-        }
-        this.Limpiar();
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        Conexion conn = Conexion.getInstance();
-        PreparedStatement ps;
-        if (txtID.getText().equals("") || encontrado == false) {
-            JOptionPane.showMessageDialog(null, "Debes seleccionar a un provedor");
-            txtID.requestFocus();
-            return;
-        }
-        String consultaSQL = "delete from Provedores where idProvedores=?;";
-        try {
-            conn.Conectar();
-            ps = conn.cadena.prepareStatement(consultaSQL);
-            ps.setInt(1, Integer.valueOf(txtID.getText()));
-            if (ps.executeUpdate() == 1) {
-                this.encontrado = false;
-                JOptionPane.showMessageDialog(null, "El proovedor a sido eliminado");
-            } else {
-                JOptionPane.showMessageDialog(null, "No se encontro al provedor");
-            }
-            ps.close();
-            conn.Desconectar();
-            conn.cadena.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        } finally {
-            ps = null;
-            conn = null;
-        }
-        this.Limpiar();
-    }//GEN-LAST:event_btnEliminarActionPerformed
-
-    private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
-        Conexion conn = Conexion.getInstance();
-        PreparedStatement ps;
-        if (txtID.getText().isBlank()) {
-            JOptionPane.showMessageDialog(null, "Debes seleccionar una categoria");
-            txtID.requestFocus();
-            return;
-        }
-        String consultaSQL = "update Provedores set nombreProvedor=?,codigoProvedor=?,telefonoProvedor=?,correoProvedor=?,producto=?,cantidad=? where idProvedores=?;";
-        try {
-            conn.Conectar();
-            ps = conn.cadena.prepareStatement(consultaSQL);
-            ps.setString(1, txtNombre.getText().trim());
-            ps.setInt(2, Integer.valueOf(txtCodigo.getText()));
-            ps.setString(3, txtTelefono.getText());
-            ps.setString(4, txtCorreo.getText());
-            ps.setString(5, txtProducto.getText());
-            ps.setInt(6, Integer.parseInt(txtCantidad.getText()));
-            ps.setInt(7, Integer.valueOf(txtID.getText()));
-            if (ps.executeUpdate() == 1) {
-                this.encontrado = false;
-                JOptionPane.showMessageDialog(null, "La categoria ha sido actualizada");
-            } else {
-                JOptionPane.showMessageDialog(null, "No se encontro la categoria");
-            }
-            ps.close();
-            conn.Desconectar();
-            conn.cadena.close();
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        } finally {
-            ps = null;
-            conn = null;
-        }
-        this.Limpiar();
-    }//GEN-LAST:event_btnActualizarActionPerformed
+    private void btnBuscar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscar1ActionPerformed
+        ListarProvedor(txtBusqueda.getText().trim());
+    }//GEN-LAST:event_btnBuscar1ActionPerformed
 
     private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCodigoActionPerformed
 
-    private void txtCantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCantidadActionPerformed
+    private void BtnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarActionPerformed
+        String resp;
+        if (txtNombre.getText().isBlank()) {
+            JOptionPane.showMessageDialog(this, "debe escribir un nombre", "Sistema de compra-venta", JOptionPane.WARNING_MESSAGE);
+            txtNombre.requestFocus();
+            return;
+        }
+        if (accion.equals("editar")) {
+            nombreant = txtNombre.getText();
+            resp = Control.Actualizar(Integer.parseInt(txtID.getText()), txtNombre.getText(), nombreant, Integer.parseInt(txtCodigo.getText()), txtTelefono.getText(), txtCorreo.getText(), txtEmpresa.getText());
+            if (resp.equals("OK")) {
+                MensajeOK("Registro actualizao correctamente");
+                ListarProvedor("");
+                Limpiar();
+                TabProvedor.setVisible(true);
+                TabOperaciones.setVisible(false);
+                BtnGuardar.setVisible(false);
+                btnVolver.setVisible(false);
+                txtNombre.setVisible(false);
+                txtCodigo.setVisible(false);
+                txtTelefono.setVisible(false);
+                txtCorreo.setVisible(false);
+                txtEmpresa.setVisible(false);
+            } else {
+                MensajeError(resp);
+            }
+        } else {
+            resp = Control.Insertar(txtNombre.getText(), Integer.parseInt(txtCodigo.getText()), txtTelefono.getText(), txtCorreo.getText(), txtEmpresa.getText());
+            if (resp.equals("OK")) {
+                MensajeOK("Registro Insertado con exito");
+                ListarProvedor("");
+                Limpiar();
+                TabProvedor.setVisible(true);
+                TabOperaciones.setVisible(false);
+                BtnGuardar.setVisible(false);
+                btnVolver.setVisible(false);
+                txtNombre.setVisible(false);
+                txtCodigo.setVisible(false);
+                txtTelefono.setVisible(false);
+                txtCorreo.setVisible(false);
+                txtEmpresa.setVisible(false);
+            } else {
+                MensajeError(resp);
+            }
+            txtNombre.requestFocus();
+        }
+    }//GEN-LAST:event_BtnGuardarActionPerformed
+
+    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+        if (tablaListado.getSelectedRowCount() == 1) {
+
+            txtID.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 0).toString());
+            txtNombre.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 1).toString());
+            txtCodigo.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 2).toString());
+            txtTelefono.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 3).toString());
+            txtCorreo.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 4).toString());
+            txtEmpresa.setText(tablaListado.getValueAt(tablaListado.getSelectedRow(), 5).toString());
+
+            TabProvedor.setVisible(false);
+            TabOperaciones.setVisible(true);
+            accion = "editar";
+            ID.setVisible(true);
+            txtID.setVisible(true);
+            BtnGuardar.setVisible(true);
+            btnVolver.setVisible(true);
+            txtNombre.setVisible(true);
+            txtCodigo.setVisible(true);
+            txtTelefono.setVisible(true);
+            txtCorreo.setVisible(true);
+            txtEmpresa.setVisible(true);
+        } else {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar un registro", "Papeleria Yolis", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCantidadActionPerformed
+    }//GEN-LAST:event_txtIDActionPerformed
+
+    private void btnVolverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVolverActionPerformed
+        TabProvedor.setVisible(true);
+        TabOperaciones.setVisible(false);
+        BtnGuardar.setVisible(false);
+        btnVolver.setVisible(false);
+        txtNombre.setVisible(false);
+        txtCodigo.setVisible(false);
+        txtTelefono.setVisible(false);
+        txtCorreo.setVisible(false);
+        txtEmpresa.setVisible(false);
+        Limpiar();  
+    }//GEN-LAST:event_btnVolverActionPerformed
+
+    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
+        String resp;
+        int id;
+        if (tablaListado.getSelectedRowCount() == 1) {
+            if (JOptionPane.showConfirmDialog(this, "¿Deseas eliminar el proveedor: " + tablaListado.getValueAt(tablaListado.getSelectedRow(), 1).toString() + "?", "Papeleria Yolis", JOptionPane.YES_NO_OPTION) == 0) {
+                resp = Control.Desactivar(Integer.parseInt(tablaListado.getValueAt(tablaListado.getSelectedRow(), 0).toString()));
+                if (resp.equals("OK")) {
+                    MensajeOK("Registro eliminado.");
+                    ListarProvedor("");
+                } else {
+                    MensajeError(resp);
+                }
+            } else {
+                MensajeError("Eliminación cancelada.");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Debes seleccionar un producto", "Papelería Yolis", JOptionPane.WARNING_MESSAGE);
+        }
+    }//GEN-LAST:event_btnEliminarActionPerformed
 
     public void Limpiar() {
         txtNombre.setText("");
         txtCodigo.setText("");
         txtTelefono.setText("");
         txtCorreo.setText("");
-        txtProducto.setText("");
-        txtCantidad.setText("");
-        txtID.setText("");
+        txtEmpresa.setText("");
     }
     public boolean encontrado = false;
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Backgroun;
-    private javax.swing.JButton btnActualizar;
-    private javax.swing.JButton btnAgregar;
-    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton BtnGuardar;
+    private javax.swing.JLabel ID;
+    private javax.swing.JPanel TabOperaciones;
+    private javax.swing.JPanel TabProvedor;
+    private javax.swing.JButton btnBuscar1;
+    private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
-    private javax.swing.JLabel imgVendedor;
+    private javax.swing.JButton btnNuevo;
+    private javax.swing.JButton btnVolver;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
-    private javax.swing.JSeparator jSeparator8;
-    private javax.swing.JLabel lblCantidad;
-    private javax.swing.JLabel lblContraseñaVendedor;
-    private javax.swing.JLabel lblCorreoVendedor;
-    private javax.swing.JLabel lblID;
-    private javax.swing.JLabel lblNombreVendedor;
-    private javax.swing.JLabel lblcodigo;
-    private javax.swing.JLabel lbltelefono;
-    private javax.swing.JTextField txtCantidad;
+    private javax.swing.JLabel lblBusqueda;
+    private javax.swing.JTable tablaListado;
+    private javax.swing.JTextField txtBusqueda;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtEmpresa;
     private javax.swing.JTextField txtID;
     private javax.swing.JTextField txtNombre;
-    private javax.swing.JTextField txtProducto;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

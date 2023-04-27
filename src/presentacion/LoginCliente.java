@@ -48,7 +48,7 @@ public class LoginCliente extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnback = new javax.swing.JLabel();
         btnSalir = new javax.swing.JLabel();
-        BackgroundLoginUsuario = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -167,7 +167,6 @@ public class LoginCliente extends javax.swing.JFrame {
         getContentPane().add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btnSalir.setFont(new java.awt.Font("Agency FB", 0, 18)); // NOI18N
-        btnSalir.setForeground(new java.awt.Color(255, 255, 255));
         btnSalir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnSalir.setText("X");
         btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -181,8 +180,20 @@ public class LoginCliente extends javax.swing.JFrame {
         });
         getContentPane().add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 0, 30, 30));
 
-        BackgroundLoginUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/backgroundlogin.png"))); // NOI18N
-        getContentPane().add(BackgroundLoginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 490));
+        jPanel2.setBackground(new java.awt.Color(117, 158, 255));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 490));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -304,7 +315,6 @@ public class LoginCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BackgroundLoginUsuario;
     private javax.swing.JButton BtnEntrar;
     private javax.swing.JPasswordField PasswordContrasena;
     private javax.swing.JLabel Usuario;
@@ -312,6 +322,7 @@ public class LoginCliente extends javax.swing.JFrame {
     private javax.swing.JLabel btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel txtContraseña;

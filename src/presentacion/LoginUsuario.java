@@ -45,9 +45,8 @@ public class LoginUsuario extends javax.swing.JFrame {
         PasswordContrasena = new javax.swing.JPasswordField();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         btnback = new javax.swing.JLabel();
-        BackgroundLoginUsuario = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
 
@@ -59,7 +58,6 @@ public class LoginUsuario extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("X");
         jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -116,34 +114,10 @@ public class LoginUsuario extends javax.swing.JFrame {
         jLabel1.setText("Vendedor");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel3.setFont(new java.awt.Font("Agency FB", 0, 12)); // NOI18N
-        jLabel3.setText("Registrar Usuario");
-        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtContraseña)
-                            .addComponent(txtCorreo))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator1)
-                        .addGap(94, 94, 94))
-                    .addComponent(txtboxCorreo)
-                    .addComponent(PasswordContrasena, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator2))
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -154,13 +128,21 @@ public class LoginUsuario extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BtnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(67, 67, 67))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(BtnEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addContainerGap())))
+                    .addComponent(txtboxCorreo)
+                    .addComponent(PasswordContrasena, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator2)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtContraseña)
+                            .addComponent(txtCorreo))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,9 +156,7 @@ public class LoginUsuario extends javax.swing.JFrame {
                 .addComponent(txtboxCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(1, 1, 1)
+                .addGap(29, 29, 29)
                 .addComponent(txtContraseña)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PasswordContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -189,6 +169,21 @@ public class LoginUsuario extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 240, 360));
 
+        jPanel4.setBackground(new java.awt.Color(117, 158, 255));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 490, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 490));
+
         btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1491254409-leftarrowbackwardsign_82959.png"))); // NOI18N
         btnback.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnback.setPreferredSize(new java.awt.Dimension(32, 32));
@@ -198,9 +193,6 @@ public class LoginUsuario extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        BackgroundLoginUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/backgroundlogin.png"))); // NOI18N
-        getContentPane().add(BackgroundLoginUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 300, 490));
 
         jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -270,7 +262,7 @@ public class LoginUsuario extends javax.swing.JFrame {
         Conexion conn = Conexion.getInstance();
         PreparedStatement ps;
         ResultSet rs;
-        String consultaSQL = "SELECT CorreoVendedor, ContrasenaVendedor FROM Vendedores WHERE CorreoVendedor=? and ContrasenaVendedor = ?;";
+        String consultaSQL = "SELECT CorreoEmpleado, ContraseñaEmpleado FROM Empleados WHERE CorreoEmpleado=? and ContraseñaEmpleado = ?;";
 
         if (!txtboxCorreo.getText().isEmpty()) {
             if (PasswordContrasena.getPassword().length > 0) {
@@ -308,12 +300,6 @@ public class LoginUsuario extends javax.swing.JFrame {
             txtboxCorreo.requestFocus();
         }
     }//GEN-LAST:event_BtnEntrarActionPerformed
-
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        hide();
-        VendedorRegistros obv = new VendedorRegistros();
-        obv.setVisible(true);
-    }//GEN-LAST:event_jLabel3MouseClicked
 
     private void PasswordContrasenaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PasswordContrasenaMousePressed
         if(String.valueOf(PasswordContrasena.getPassword()).equals("Contraseña"))
@@ -359,17 +345,16 @@ public class LoginUsuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel BackgroundLoginUsuario;
     private javax.swing.JButton BtnEntrar;
     private javax.swing.JPasswordField PasswordContrasena;
     private javax.swing.JLabel Usuario;
     private javax.swing.JLabel btnback;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel txtContraseña;
